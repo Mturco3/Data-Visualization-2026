@@ -24,13 +24,3 @@ Download the listings CSV files from [Inside Airbnb](http://insideairbnb.com/get
 - Rome (Roma)
 
 Select the `listings.csv` (summary) file for each city and rename them as shown above.
-
-### Generating the notebook
-
-Run the notebook generator script:
-
-```bash
-python generate_notebook.py
-```
-
-This will create `airbnb_analysis.ipynb` in the project root.
