@@ -1,87 +1,35 @@
-# Airbnb and Rent Analysis (Milan Scope)
+# Airbnb and Rental Dynamics in Milan
 
-This project analyzes Airbnb and rental indicators for Milan and generates the required visualization outputs.
+This project studies how short-term rental activity (Airbnb) relates to long-term rental market dynamics in Milan.
+The core idea is to move from a simple correlation question to a neighborhood-level evidence framework. The analysis measures Airbnb presence and intensity by neighborhood, links neighborhoods to OMI (Osservatorio del Mercato Immobiliare) rental zones, and compares Airbnb pressure with rental levels across space and time.
 
-The current analysis is built to answer this question:
-- do zones with higher Airbnb pressure also show higher rental increases over time?
+## Project Objective
 
-## Data Required
+Instead of asking only "does Airbnb increase rents?", the project asks where Airbnb pressure and rental values evolve together, where they diverge, and how much of the observed variation reflects spatial concentration versus broader city trends. This makes the analysis more useful for urban and policy discussions, because findings can be interpreted zone by zone rather than only at city-average level.
+The goal is reached through creative visualizations and descriptive analysis rather than complex econometric modeling. The project is designed to be reproducible and extendable, with clear data inputs, processing steps, and outputs.
 
-Put these files in Data/:
+The target audience is non-expert urban stakeholders (students, residents, and local policy observers) who need clear evidence, not only technical metrics. The system is designed to support five tasks: compare neighborhoods, identify spatial concentration, inspect temporal evolution, contrast ethical and misleading narratives (white-hat vs black-hat), and communicate actionable findings.
 
-- Data/listings_milan.csv
-- Data/total_rentals.csv
+## Data Inputs
 
-## Environment Setup
+Main datasets are stored in `Data/`:
+- `listings_milan.csv` and `listings_milan_clean.csv`: Airbnb listing-level information.
+- `reviews_milan.csv`: review activity used for temporal signals.
+- `total_rentals.csv`: aggregated rental market indicators.
+- `quotazioni_omi_locazione_YYYY_S.csv`: semi-annual OMI rental quotations (2018-2024).
 
-PowerShell:
+These sources are integrated to satisfy the multi-dataset requirement, and data limitations or potential bias are discussed in the notebooks and final report.
 
-        .\Data_Viz\Scripts\Activate.ps1
+## Repository Workflow
 
-Install dependencies:
+The workflow starts with Airbnb exploration and cleaning in `airbnb_milan_eda.ipynb`, continues with OMI rental analysis in `OMI_data.ipynb`, and extends to temporal patterns in `reviews_listings_temporal_analysis.ipynb`. Neighborhoods are then linked to OMI zones through `map_neighbourhoods_to_omi.py`.
 
-        python -m pip install -r requirements.txt
+## Outputs
 
-## Run
+All analysis outputs will be added to the `Output/` folder.
 
-Generate all project plots:
+In line with the course guidelines, the full project package also includes the interactive visual analytics views, the white-hat and black-hat static views, a small original JavaScript interactive component in the project webpage, and the accompanying short paper-style report.
 
-        python visualizations.py
+## Relevance of the Study
 
-All generated plots are saved in:
-
-- Outputs/plots/
-
-## Visualization Set (Current)
-
-The script exports PNG plots only:
-
-- viz1_pressure_ranking.png
-        - Ranked pressure profile by neighborhood (composite score).
-
-- viz2_price_vs_entire_home.png
-        - Bubble scatter of neighborhood median Airbnb price vs entire-home share.
-
-- viz3_host_concentration.png
-        - Host concentration curve to show supply concentration.
-
-- viz4_rent_vs_airbnb.png
-        - Two-panel temporal view:
-                - city-level rental trend over years
-                - top zones with strongest rental levels across time
-
-- viz5_explanatory.png
-        - Explanatory summary for non-technical audience.
-
-- viz6_creative_spatial.png
-        - Spatial distribution of listings in Milan with visual emphasis on intensity.
-
-- viz7_white_hat.png
-        - Main diagnostic figure for the research question:
-                - city trend
-                - Airbnb pressure by neighborhood
-                - pressure vs rent-growth scatter with correlation line and coefficient
-                - interpretation panel
-
-- viz8_black_hat.png
-        - Intentionally misleading version (same underlying data) for ethics comparison.
-
-## Interpretation Notes
-
-- Correlation in V7 does not imply causation.
-- Matching between Airbnb neighborhood names and rental zones may be partial, depending on naming consistency in total_rentals.csv.
-- If zone names are mismatched, V7 reports fewer matched areas in the insight panel.
-
-## Files
-
-- visualizations.py: script that generates plots
-- visualizations_specification.md: detailed visualization specification
-- Resources/instructions.md: technical implementation instructions
-
-## Troubleshooting
-
-- If file parsing fails, verify total_rentals.csv delimiter and encoding.
-- The loader attempts multiple parsing modes (comma/semicolon, utf-8/latin1, safe row skipping).
-- If package installation fails with pip launcher issues, use:
-
-        .\Data_Viz\Scripts\python.exe -m pip install <package>
+Milan is a useful case for studying the interaction between tourism platforms and housing markets. By combining Airbnb microdata with official OMI rental quotes, the project provides a reproducible path to investigate spatial pressure, rental heterogeneity, and potential displacement signals at neighborhood scale.
