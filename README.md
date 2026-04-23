@@ -22,11 +22,11 @@ These sources are integrated to satisfy the multi-dataset requirement, and data 
 
 ## Repository Workflow
 
-The workflow starts with Airbnb exploration and cleaning in `airbnb_milan_eda.ipynb`, continues with OMI rental analysis in `OMI_data.ipynb`, and extends to temporal patterns in `reviews_listings_temporal_analysis.ipynb`. Neighborhoods are then linked to OMI zones through `map_neighbourhoods_to_omi.py`.
+The workflow starts with Airbnb exploration and cleaning in `src/airbnb_milan_eda.ipynb`, continues with OMI rental analysis in `src/OMI_data.ipynb`, and extends to temporal patterns in `src/reviews_listings_temporal_analysis.ipynb`. Neighborhoods are then linked to OMI zones through `src/map_neighbourhoods_to_omi.py`.
 
 ## Initial EDA
 
-The first exploratory results were obtained in `cross_comparison_start.ipynb` by building yearly indicators from the raw sources and comparing them visually.
+The first exploratory results were obtained in `src/cross_comparison_start.ipynb` by building yearly indicators from the raw sources and comparing them visually.
 
 The process is simple and reproducible: Airbnb reviews are aggregated by year to compute yearly review activity (`review_count`) and active supply (`active_listings`), while OMI rental data are cleaned and aggregated by year to compute rental levels (`Loc_min`, `rent_mid`, `Loc_max`). These yearly tables are then merged on `Year`, and the relationships are inspected with trend plots and scatter plots.
 
