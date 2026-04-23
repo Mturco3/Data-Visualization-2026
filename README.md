@@ -24,6 +24,16 @@ These sources are integrated to satisfy the multi-dataset requirement, and data 
 
 The workflow starts with Airbnb exploration and cleaning in `airbnb_milan_eda.ipynb`, continues with OMI rental analysis in `OMI_data.ipynb`, and extends to temporal patterns in `reviews_listings_temporal_analysis.ipynb`. Neighborhoods are then linked to OMI zones through `map_neighbourhoods_to_omi.py`.
 
+## Initial EDA
+
+The first exploratory results were obtained in `cross_comparison_start.ipynb` by building yearly indicators from the raw sources and comparing them visually.
+
+The process is simple and reproducible: Airbnb reviews are aggregated by year to compute yearly review activity (`review_count`) and active supply (`active_listings`), while OMI rental data are cleaned and aggregated by year to compute rental levels (`Loc_min`, `rent_mid`, `Loc_max`). These yearly tables are then merged on `Year`, and the relationships are inspected with trend plots and scatter plots.
+
+Initial findings suggest a positive association between Airbnb activity and rent levels in the aggregated yearly data. In particular, both standardized trends increase strongly after 2021 and remain close in recent years, and the review-vs-rent scatter plots show positive slopes for lower, mid, and upper rent levels. At the same time, the activity-mix plot indicates that market expansion (`active_listings`) and engagement intensity (`reviews_per_active_listing`) do not move identically every year, especially around the 2020 shock and the following recovery.
+
+These findings are intentionally exploratory: they provide a consistent first signal and guide the next, more detailed neighborhood-level analysis.
+
 ## Outputs
 
 All analysis outputs will be added to the `Output/` folder.
