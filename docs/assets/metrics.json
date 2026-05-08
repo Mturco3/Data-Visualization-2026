@@ -1,0 +1,948 @@
+{
+  "hero": {
+    "listings_snapshot": 22948,
+    "neighbourhoods": 87,
+    "years_overlap": 7
+  },
+  "findings": {
+    "top5_share_pct": 28.0,
+    "entire_home_share_pct": 87.9,
+    "professional_host_share_pct": 45.1,
+    "active_share_pct": 70.4,
+    "license_share_pct": 86.1,
+    "listing_rent_corr": 0.62,
+    "professional_rent_corr": 0.51,
+    "review_drop_2020_pct": 67.5,
+    "review_2024_vs_2019_pct": 329.0
+  },
+  "timeline": [
+    {
+      "period": "2018",
+      "airbnb_index": 100.0,
+      "rent_index": 100.0,
+      "review_count": 40507,
+      "active_listings": 1991,
+      "rent_mid": 10.57
+    },
+    {
+      "period": "2019",
+      "airbnb_index": 140.6,
+      "rent_index": 103.9,
+      "review_count": 56948,
+      "active_listings": 2712,
+      "rent_mid": 10.99
+    },
+    {
+      "period": "2020",
+      "airbnb_index": 45.6,
+      "rent_index": 105.9,
+      "review_count": 18486,
+      "active_listings": 2437,
+      "rent_mid": 11.2
+    },
+    {
+      "period": "2021",
+      "airbnb_index": 98.7,
+      "rent_index": 107.0,
+      "review_count": 39974,
+      "active_listings": 3344,
+      "rent_mid": 11.31
+    },
+    {
+      "period": "2022",
+      "airbnb_index": 273.2,
+      "rent_index": 113.9,
+      "review_count": 110657,
+      "active_listings": 5649,
+      "rent_mid": 12.04
+    },
+    {
+      "period": "2023",
+      "airbnb_index": 443.2,
+      "rent_index": 124.2,
+      "review_count": 179511,
+      "active_listings": 8604,
+      "rent_mid": 13.13
+    },
+    {
+      "period": "2024",
+      "airbnb_index": 603.1,
+      "rent_index": 135.9,
+      "review_count": 244309,
+      "active_listings": 12796,
+      "rent_mid": 14.37
+    }
+  ],
+  "neighbourhood": [
+    {
+      "neighbourhood": "Buenos Aires - Venezia",
+      "omi_zona": "C12",
+      "listings_count": 1864,
+      "entire_home_share": 0.8685622317596566,
+      "professional_host_share": 0.46834763948497854,
+      "active_share": 0.7392703862660944,
+      "median_price": 141.0,
+      "omi_rent_2024": 19.722727272727273
+    },
+    {
+      "neighbourhood": "Duomo",
+      "omi_zona": "B12",
+      "listings_count": 1626,
+      "entire_home_share": 0.9231242312423125,
+      "professional_host_share": 0.6992619926199262,
+      "active_share": 0.6955719557195572,
+      "median_price": 256.0,
+      "omi_rent_2024": 42.11304347826087
+    },
+    {
+      "neighbourhood": "Sarpi",
+      "omi_zona": "C16",
+      "listings_count": 1005,
+      "entire_home_share": 0.918407960199005,
+      "professional_host_share": 0.48756218905472637,
+      "active_share": 0.7303482587064677,
+      "median_price": 126.0,
+      "omi_rent_2024": 14.936363636363637
+    },
+    {
+      "neighbourhood": "Centrale",
+      "omi_zona": "C15",
+      "listings_count": 1004,
+      "entire_home_share": 0.8814741035856574,
+      "professional_host_share": 0.499003984063745,
+      "active_share": 0.795816733067729,
+      "median_price": 141.0,
+      "omi_rent_2024": 14.163461538461538
+    },
+    {
+      "neighbourhood": "Loreto",
+      "omi_zona": "C12",
+      "listings_count": 924,
+      "entire_home_share": 0.8582251082251082,
+      "professional_host_share": 0.4025974025974026,
+      "active_share": 0.7218614718614719,
+      "median_price": 104.0,
+      "omi_rent_2024": 19.722727272727273
+    },
+    {
+      "neighbourhood": "Brera",
+      "omi_zona": "B15",
+      "listings_count": 923,
+      "entire_home_share": 0.942578548212351,
+      "professional_host_share": 0.562296858071506,
+      "active_share": 0.7193932827735645,
+      "median_price": 210.0,
+      "omi_rent_2024": 32.05217391304348
+    },
+    {
+      "neighbourhood": "Ticinese",
+      "omi_zona": "B21",
+      "listings_count": 882,
+      "entire_home_share": 0.9138321995464853,
+      "professional_host_share": 0.43537414965986393,
+      "active_share": 0.7131519274376418,
+      "median_price": 135.0,
+      "omi_rent_2024": 17.605
+    },
+    {
+      "neighbourhood": "Navigli",
+      "omi_zona": "C18",
+      "listings_count": 859,
+      "entire_home_share": 0.9371362048894063,
+      "professional_host_share": 0.4179278230500582,
+      "active_share": 0.7578579743888242,
+      "median_price": 126.5,
+      "omi_rent_2024": 15.002272727272727
+    },
+    {
+      "neighbourhood": "Isola",
+      "omi_zona": "C14",
+      "listings_count": 716,
+      "entire_home_share": 0.8896648044692738,
+      "professional_host_share": 0.40782122905027934,
+      "active_share": 0.7122905027932961,
+      "median_price": 125.0,
+      "omi_rent_2024": 28.564999999999998
+    },
+    {
+      "neighbourhood": "Xxii Marzo",
+      "omi_zona": "C20",
+      "listings_count": 644,
+      "entire_home_share": 0.8944099378881988,
+      "professional_host_share": 0.4642857142857143,
+      "active_share": 0.6847826086956522,
+      "median_price": 136.0,
+      "omi_rent_2024": 14.784090909090908
+    },
+    {
+      "neighbourhood": "Guastalla",
+      "omi_zona": "B13",
+      "listings_count": 570,
+      "entire_home_share": 0.8719298245614036,
+      "professional_host_share": 0.6157894736842106,
+      "active_share": 0.6684210526315789,
+      "median_price": 181.5,
+      "omi_rent_2024": 23.380434782608695
+    },
+    {
+      "neighbourhood": "Porta Romana",
+      "omi_zona": "B19",
+      "listings_count": 513,
+      "entire_home_share": 0.9337231968810916,
+      "professional_host_share": 0.5165692007797271,
+      "active_share": 0.7134502923976608,
+      "median_price": 128.0,
+      "omi_rent_2024": 23.36086956521739
+    },
+    {
+      "neighbourhood": "Citta' Studi",
+      "omi_zona": "D12",
+      "listings_count": 471,
+      "entire_home_share": 0.8747346072186837,
+      "professional_host_share": 0.3630573248407643,
+      "active_share": 0.6624203821656051,
+      "median_price": 107.0,
+      "omi_rent_2024": 12.994827586206897
+    },
+    {
+      "neighbourhood": "Lodi - Corvetto",
+      "omi_zona": "D16",
+      "listings_count": 463,
+      "entire_home_share": 0.7775377969762419,
+      "professional_host_share": 0.42332613390928725,
+      "active_share": 0.6889848812095032,
+      "median_price": 90.0,
+      "omi_rent_2024": 10.410869565217393
+    },
+    {
+      "neighbourhood": "Magenta - S. Vittore",
+      "omi_zona": "B16",
+      "listings_count": 461,
+      "entire_home_share": 0.928416485900217,
+      "professional_host_share": 0.5770065075921909,
+      "active_share": 0.6637744034707158,
+      "median_price": 171.0,
+      "omi_rent_2024": 25.491304347826084
+    },
+    {
+      "neighbourhood": "Bande Nere",
+      "omi_zona": "D25",
+      "listings_count": 426,
+      "entire_home_share": 0.8708920187793427,
+      "professional_host_share": 0.4061032863849765,
+      "active_share": 0.687793427230047,
+      "median_price": 101.0,
+      "omi_rent_2024": 9.458
+    },
+    {
+      "neighbourhood": "De Angeli - Monte Rosa",
+      "omi_zona": "C17",
+      "listings_count": 418,
+      "entire_home_share": 0.937799043062201,
+      "professional_host_share": 0.48564593301435405,
+      "active_share": 0.7488038277511961,
+      "median_price": 122.0,
+      "omi_rent_2024": 17.764814814814812
+    },
+    {
+      "neighbourhood": "Tortona",
+      "omi_zona": "C18",
+      "listings_count": 407,
+      "entire_home_share": 0.9213759213759214,
+      "professional_host_share": 0.37346437346437344,
+      "active_share": 0.714987714987715,
+      "median_price": 135.0,
+      "omi_rent_2024": 15.002272727272727
+    },
+    {
+      "neighbourhood": "Villapizzone",
+      "omi_zona": "D30",
+      "listings_count": 403,
+      "entire_home_share": 0.8635235732009926,
+      "professional_host_share": 0.27543424317617865,
+      "active_share": 0.6873449131513648,
+      "median_price": 89.0,
+      "omi_rent_2024": 9.7
+    },
+    {
+      "neighbourhood": "Padova",
+      "omi_zona": "D10",
+      "listings_count": 399,
+      "entire_home_share": 0.8571428571428571,
+      "professional_host_share": 0.3433583959899749,
+      "active_share": 0.6842105263157895,
+      "median_price": 88.0,
+      "omi_rent_2024": 9.326086956521738
+    },
+    {
+      "neighbourhood": "Washington",
+      "omi_zona": "C17",
+      "listings_count": 393,
+      "entire_home_share": 0.8702290076335878,
+      "professional_host_share": 0.49872773536895676,
+      "active_share": 0.7048346055979644,
+      "median_price": 130.5,
+      "omi_rent_2024": 17.764814814814812
+    },
+    {
+      "neighbourhood": "Giambellino",
+      "omi_zona": "D25",
+      "listings_count": 387,
+      "entire_home_share": 0.8552971576227391,
+      "professional_host_share": 0.3669250645994832,
+      "active_share": 0.6770025839793282,
+      "median_price": 100.0,
+      "omi_rent_2024": 9.458
+    },
+    {
+      "neighbourhood": "Garibaldi Repubblica",
+      "omi_zona": "C14",
+      "listings_count": 349,
+      "entire_home_share": 0.9455587392550143,
+      "professional_host_share": 0.49570200573065903,
+      "active_share": 0.7679083094555874,
+      "median_price": 164.0,
+      "omi_rent_2024": 28.564999999999998
+    },
+    {
+      "neighbourhood": "Maciachini - Maggiolina",
+      "omi_zona": "D36",
+      "listings_count": 342,
+      "entire_home_share": 0.8333333333333334,
+      "professional_host_share": 0.36257309941520466,
+      "active_share": 0.7105263157894737,
+      "median_price": 108.0,
+      "omi_rent_2024": 10.306521739130435
+    },
+    {
+      "neighbourhood": "Vigentina",
+      "omi_zona": "B20",
+      "listings_count": 340,
+      "entire_home_share": 0.9058823529411765,
+      "professional_host_share": 0.5264705882352941,
+      "active_share": 0.6264705882352941,
+      "median_price": 157.0,
+      "omi_rent_2024": 19.3625
+    },
+    {
+      "neighbourhood": "Viale Monza",
+      "omi_zona": "D35",
+      "listings_count": 320,
+      "entire_home_share": 0.859375,
+      "professional_host_share": 0.41875,
+      "active_share": 0.73125,
+      "median_price": 92.0,
+      "omi_rent_2024": 9.558695652173913
+    },
+    {
+      "neighbourhood": "S. Cristoforo",
+      "omi_zona": "C18",
+      "listings_count": 314,
+      "entire_home_share": 0.821656050955414,
+      "professional_host_share": 0.34076433121019106,
+      "active_share": 0.6847133757961783,
+      "median_price": 99.5,
+      "omi_rent_2024": 15.002272727272727
+    },
+    {
+      "neighbourhood": "Umbria - Molise",
+      "omi_zona": "C20",
+      "listings_count": 309,
+      "entire_home_share": 0.8640776699029126,
+      "professional_host_share": 0.3883495145631068,
+      "active_share": 0.6893203883495146,
+      "median_price": 96.0,
+      "omi_rent_2024": 14.784090909090908
+    },
+    {
+      "neighbourhood": "Dergano",
+      "omi_zona": "D31",
+      "listings_count": 286,
+      "entire_home_share": 0.9405594405594405,
+      "professional_host_share": 0.3776223776223776,
+      "active_share": 0.6748251748251748,
+      "median_price": 97.0,
+      "omi_rent_2024": 9.554347826086957
+    },
+    {
+      "neighbourhood": "Stadera",
+      "omi_zona": "D18",
+      "listings_count": 274,
+      "entire_home_share": 0.8357664233576643,
+      "professional_host_share": 0.35766423357664234,
+      "active_share": 0.6386861313868614,
+      "median_price": 96.5,
+      "omi_rent_2024": 9.597826086956522
+    },
+    {
+      "neighbourhood": "Pagano",
+      "omi_zona": "C17",
+      "listings_count": 258,
+      "entire_home_share": 0.8875968992248062,
+      "professional_host_share": 0.4573643410852713,
+      "active_share": 0.7170542635658915,
+      "median_price": 148.5,
+      "omi_rent_2024": 17.764814814814812
+    },
+    {
+      "neighbourhood": "Corsica",
+      "omi_zona": "D12",
+      "listings_count": 245,
+      "entire_home_share": 0.8653061224489796,
+      "professional_host_share": 0.3836734693877551,
+      "active_share": 0.6448979591836734,
+      "median_price": 111.5,
+      "omi_rent_2024": 12.994827586206897
+    },
+    {
+      "neighbourhood": "Ghisolfa",
+      "omi_zona": "C16",
+      "listings_count": 243,
+      "entire_home_share": 0.8806584362139918,
+      "professional_host_share": 0.39094650205761317,
+      "active_share": 0.7160493827160493,
+      "median_price": 119.0,
+      "omi_rent_2024": 14.936363636363637
+    },
+    {
+      "neighbourhood": "Tibaldi",
+      "omi_zona": "C19",
+      "listings_count": 236,
+      "entire_home_share": 0.8813559322033898,
+      "professional_host_share": 0.3855932203389831,
+      "active_share": 0.576271186440678,
+      "median_price": 100.0,
+      "omi_rent_2024": 13.93409090909091
+    },
+    {
+      "neighbourhood": "Selinunte",
+      "omi_zona": "D24",
+      "listings_count": 236,
+      "entire_home_share": 0.9322033898305084,
+      "professional_host_share": 0.4194915254237288,
+      "active_share": 0.7372881355932204,
+      "median_price": 106.0,
+      "omi_rent_2024": 10.758
+    },
+    {
+      "neighbourhood": "Affori",
+      "omi_zona": "D32",
+      "listings_count": 222,
+      "entire_home_share": 0.8333333333333334,
+      "professional_host_share": 0.36486486486486486,
+      "active_share": 0.7117117117117117,
+      "median_price": 85.0,
+      "omi_rent_2024": 8.792592592592593
+    },
+    {
+      "neighbourhood": "Scalo Romana",
+      "omi_zona": "C19",
+      "listings_count": 199,
+      "entire_home_share": 0.8693467336683417,
+      "professional_host_share": 0.36180904522613067,
+      "active_share": 0.6934673366834171,
+      "median_price": 94.0,
+      "omi_rent_2024": 13.93409090909091
+    },
+    {
+      "neighbourhood": "Bovisa",
+      "omi_zona": "D31",
+      "listings_count": 191,
+      "entire_home_share": 0.8272251308900523,
+      "professional_host_share": 0.4712041884816754,
+      "active_share": 0.7172774869109948,
+      "median_price": 85.5,
+      "omi_rent_2024": 9.554347826086957
+    },
+    {
+      "neighbourhood": "Greco",
+      "omi_zona": "D34",
+      "listings_count": 169,
+      "entire_home_share": 0.8816568047337278,
+      "professional_host_share": 0.35502958579881655,
+      "active_share": 0.621301775147929,
+      "median_price": 100.5,
+      "omi_rent_2024": 8.917391304347825
+    },
+    {
+      "neighbourhood": "Gallaratese",
+      "omi_zona": "E6",
+      "listings_count": 158,
+      "entire_home_share": 0.7468354430379747,
+      "professional_host_share": 0.2974683544303797,
+      "active_share": 0.7341772151898734,
+      "median_price": 103.0,
+      "omi_rent_2024": 7.732608695652174
+    },
+    {
+      "neighbourhood": "Parco Lambro - Cimiano",
+      "omi_zona": "D10",
+      "listings_count": 155,
+      "entire_home_share": 0.7870967741935484,
+      "professional_host_share": 0.45161290322580644,
+      "active_share": 0.567741935483871,
+      "median_price": 92.0,
+      "omi_rent_2024": 9.326086956521738
+    },
+    {
+      "neighbourhood": "Niguarda - Ca' Granda",
+      "omi_zona": "D33",
+      "listings_count": 153,
+      "entire_home_share": 0.7581699346405228,
+      "professional_host_share": 0.3006535947712418,
+      "active_share": 0.6993464052287581,
+      "median_price": 85.0,
+      "omi_rent_2024": 8.830434782608695
+    },
+    {
+      "neighbourhood": "Ex Om - Morivione",
+      "omi_zona": "D20",
+      "listings_count": 153,
+      "entire_home_share": 0.8496732026143791,
+      "professional_host_share": 0.477124183006536,
+      "active_share": 0.7189542483660131,
+      "median_price": 105.5,
+      "omi_rent_2024": 10.505999999999998
+    },
+    {
+      "neighbourhood": "Ripamonti",
+      "omi_zona": "D18",
+      "listings_count": 152,
+      "entire_home_share": 0.8552631578947368,
+      "professional_host_share": 0.29605263157894735,
+      "active_share": 0.7039473684210527,
+      "median_price": 90.0,
+      "omi_rent_2024": 9.597826086956522
+    },
+    {
+      "neighbourhood": "Ronchetto Sul Naviglio",
+      "omi_zona": "D21",
+      "listings_count": 124,
+      "entire_home_share": 0.8548387096774194,
+      "professional_host_share": 0.3629032258064516,
+      "active_share": 0.5564516129032258,
+      "median_price": 94.0,
+      "omi_rent_2024": 10.578
+    },
+    {
+      "neighbourhood": "Portello",
+      "omi_zona": "D28",
+      "listings_count": 120,
+      "entire_home_share": 0.9416666666666667,
+      "professional_host_share": 0.3333333333333333,
+      "active_share": 0.7666666666666667,
+      "median_price": 128.5,
+      "omi_rent_2024": 9.281481481481482
+    },
+    {
+      "neighbourhood": "Mecenate",
+      "omi_zona": "D15",
+      "listings_count": 114,
+      "entire_home_share": 0.7631578947368421,
+      "professional_host_share": 0.3157894736842105,
+      "active_share": 0.7456140350877193,
+      "median_price": 89.0,
+      "omi_rent_2024": 8.612499999999999
+    },
+    {
+      "neighbourhood": "Farini",
+      "omi_zona": "C16",
+      "listings_count": 111,
+      "entire_home_share": 0.7747747747747747,
+      "professional_host_share": 0.4594594594594595,
+      "active_share": 0.6396396396396397,
+      "median_price": 109.0,
+      "omi_rent_2024": 14.936363636363637
+    },
+    {
+      "neighbourhood": "S. Siro",
+      "omi_zona": "D24",
+      "listings_count": 104,
+      "entire_home_share": 0.8173076923076923,
+      "professional_host_share": 0.3076923076923077,
+      "active_share": 0.7211538461538461,
+      "median_price": 113.0,
+      "omi_rent_2024": 10.758
+    },
+    {
+      "neighbourhood": "Lambrate",
+      "omi_zona": "D13",
+      "listings_count": 92,
+      "entire_home_share": 0.8043478260869565,
+      "professional_host_share": 0.29347826086956524,
+      "active_share": 0.6956521739130435,
+      "median_price": 81.0,
+      "omi_rent_2024": 9.328260869565218
+    },
+    {
+      "neighbourhood": "Maggiore - Musocco",
+      "omi_zona": "D30",
+      "listings_count": 91,
+      "entire_home_share": 0.9120879120879121,
+      "professional_host_share": 0.37362637362637363,
+      "active_share": 0.7362637362637363,
+      "median_price": 109.0,
+      "omi_rent_2024": 9.7
+    },
+    {
+      "neighbourhood": "Lorenteggio",
+      "omi_zona": "D25",
+      "listings_count": 88,
+      "entire_home_share": 0.75,
+      "professional_host_share": 0.3409090909090909,
+      "active_share": 0.5795454545454546,
+      "median_price": 86.0,
+      "omi_rent_2024": 9.458
+    },
+    {
+      "neighbourhood": "Adriano",
+      "omi_zona": "D35",
+      "listings_count": 79,
+      "entire_home_share": 0.8481012658227848,
+      "professional_host_share": 0.3037974683544304,
+      "active_share": 0.6455696202531646,
+      "median_price": 95.0,
+      "omi_rent_2024": 9.558695652173913
+    },
+    {
+      "neighbourhood": "Bicocca",
+      "omi_zona": "D34",
+      "listings_count": 79,
+      "entire_home_share": 0.8987341772151899,
+      "professional_host_share": 0.3670886075949367,
+      "active_share": 0.6962025316455697,
+      "median_price": 89.0,
+      "omi_rent_2024": 8.917391304347825
+    },
+    {
+      "neighbourhood": "Forze Armate",
+      "omi_zona": "D25",
+      "listings_count": 76,
+      "entire_home_share": 0.7105263157894737,
+      "professional_host_share": 0.4342105263157895,
+      "active_share": 0.7631578947368421,
+      "median_price": 80.0,
+      "omi_rent_2024": 9.458
+    },
+    {
+      "neighbourhood": "Quarto Cagnino",
+      "omi_zona": "E5",
+      "listings_count": 71,
+      "entire_home_share": 0.6056338028169014,
+      "professional_host_share": 0.676056338028169,
+      "active_share": 0.5633802816901409,
+      "median_price": 116.5,
+      "omi_rent_2024": 7.405555555555555
+    },
+    {
+      "neighbourhood": "Rogoredo",
+      "omi_zona": "D37",
+      "listings_count": 69,
+      "entire_home_share": 0.9565217391304348,
+      "professional_host_share": 0.36231884057971014,
+      "active_share": 0.6811594202898551,
+      "median_price": 105.0,
+      "omi_rent_2024": 10.020833333333334
+    },
+    {
+      "neighbourhood": "Baggio",
+      "omi_zona": "E5",
+      "listings_count": 65,
+      "entire_home_share": 0.7846153846153846,
+      "professional_host_share": 0.1076923076923077,
+      "active_share": 0.6307692307692307,
+      "median_price": 77.0,
+      "omi_rent_2024": 7.405555555555555
+    },
+    {
+      "neighbourhood": "Quarto Oggiaro",
+      "omi_zona": "E8",
+      "listings_count": 60,
+      "entire_home_share": 0.6333333333333333,
+      "professional_host_share": 0.3,
+      "active_share": 0.5833333333333334,
+      "median_price": 76.5,
+      "omi_rent_2024": 7.065217391304348
+    },
+    {
+      "neighbourhood": "Barona",
+      "omi_zona": "D21",
+      "listings_count": 60,
+      "entire_home_share": 0.5833333333333334,
+      "professional_host_share": 0.13333333333333333,
+      "active_share": 0.5333333333333333,
+      "median_price": 84.5,
+      "omi_rent_2024": 10.578
+    },
+    {
+      "neighbourhood": "Ortomercato",
+      "omi_zona": "D15",
+      "listings_count": 59,
+      "entire_home_share": 0.8305084745762712,
+      "professional_host_share": 0.3559322033898305,
+      "active_share": 0.5932203389830508,
+      "median_price": 95.5,
+      "omi_rent_2024": 8.612499999999999
+    },
+    {
+      "neighbourhood": "Bruzzano",
+      "omi_zona": "E8",
+      "listings_count": 45,
+      "entire_home_share": 0.6666666666666666,
+      "professional_host_share": 0.3333333333333333,
+      "active_share": 0.6666666666666666,
+      "median_price": 78.0,
+      "omi_rent_2024": 7.065217391304348
+    },
+    {
+      "neighbourhood": "Qt 8",
+      "omi_zona": "D28",
+      "listings_count": 43,
+      "entire_home_share": 0.7209302325581395,
+      "professional_host_share": 0.32558139534883723,
+      "active_share": 0.6744186046511628,
+      "median_price": 84.0,
+      "omi_rent_2024": 9.281481481481482
+    },
+    {
+      "neighbourhood": "Gratosoglio - Ticinello",
+      "omi_zona": "E7",
+      "listings_count": 36,
+      "entire_home_share": 0.6388888888888888,
+      "professional_host_share": 0.3055555555555556,
+      "active_share": 0.6111111111111112,
+      "median_price": 98.0,
+      "omi_rent_2024": 6.269565217391304
+    },
+    {
+      "neighbourhood": "Parco Forlanini - Ortica",
+      "omi_zona": "D15",
+      "listings_count": 33,
+      "entire_home_share": 0.7575757575757576,
+      "professional_host_share": 0.42424242424242425,
+      "active_share": 0.6060606060606061,
+      "median_price": 119.0,
+      "omi_rent_2024": 8.612499999999999
+    },
+    {
+      "neighbourhood": "Comasina",
+      "omi_zona": "D32",
+      "listings_count": 31,
+      "entire_home_share": 0.6129032258064516,
+      "professional_host_share": 0.16129032258064516,
+      "active_share": 0.7419354838709677,
+      "median_price": 85.5,
+      "omi_rent_2024": 8.792592592592593
+    },
+    {
+      "neighbourhood": "Parco Sempione",
+      "omi_zona": "B17",
+      "listings_count": 28,
+      "entire_home_share": 0.9642857142857143,
+      "professional_host_share": 0.4642857142857143,
+      "active_share": 0.8214285714285714,
+      "median_price": 144.0,
+      "omi_rent_2024": 22.058695652173913
+    },
+    {
+      "neighbourhood": "Parco Monlue' - Ponte Lambro",
+      "omi_zona": "D37",
+      "listings_count": 26,
+      "entire_home_share": 0.8461538461538461,
+      "professional_host_share": 0.23076923076923078,
+      "active_share": 0.5,
+      "median_price": 73.0,
+      "omi_rent_2024": 10.020833333333334
+    },
+    {
+      "neighbourhood": "Tre Torri",
+      "omi_zona": "C13",
+      "listings_count": 22,
+      "entire_home_share": 0.9090909090909091,
+      "professional_host_share": 0.5454545454545454,
+      "active_share": 0.7727272727272727,
+      "median_price": 125.0,
+      "omi_rent_2024": 26.666666666666668
+    },
+    {
+      "neighbourhood": "Quintosole",
+      "omi_zona": "D38",
+      "listings_count": 22,
+      "entire_home_share": 0.6363636363636364,
+      "professional_host_share": 0.8181818181818182,
+      "active_share": 0.6363636363636364,
+      "median_price": 108.5,
+      "omi_rent_2024": 10.758333333333333
+    },
+    {
+      "neighbourhood": "Quinto Romano",
+      "omi_zona": "E5",
+      "listings_count": 19,
+      "entire_home_share": 0.7894736842105263,
+      "professional_host_share": 0.10526315789473684,
+      "active_share": 0.47368421052631576,
+      "median_price": 98.5,
+      "omi_rent_2024": 7.405555555555555
+    },
+    {
+      "neighbourhood": "Triulzo Superiore",
+      "omi_zona": "D39",
+      "listings_count": 18,
+      "entire_home_share": 0.7777777777777778,
+      "professional_host_share": 0.2222222222222222,
+      "active_share": 0.8888888888888888,
+      "median_price": 88.0,
+      "omi_rent_2024": 11.4375
+    },
+    {
+      "neighbourhood": "Trenno",
+      "omi_zona": "E6",
+      "listings_count": 14,
+      "entire_home_share": 0.7142857142857143,
+      "professional_host_share": 0.2857142857142857,
+      "active_share": 0.5,
+      "median_price": 89.0,
+      "omi_rent_2024": 7.732608695652174
+    },
+    {
+      "neighbourhood": "Bovisasca",
+      "omi_zona": "D32",
+      "listings_count": 13,
+      "entire_home_share": 0.8461538461538461,
+      "professional_host_share": 0.07692307692307693,
+      "active_share": 0.6923076923076923,
+      "median_price": 83.0,
+      "omi_rent_2024": 8.792592592592593
+    },
+    {
+      "neighbourhood": "Giardini Porta Venezia",
+      "omi_zona": "B18",
+      "listings_count": 10,
+      "entire_home_share": 0.7,
+      "professional_host_share": 0.4,
+      "active_share": 0.4,
+      "median_price": 167.0,
+      "omi_rent_2024": 25.395
+    },
+    {
+      "neighbourhood": "Parco Bosco In Citt",
+      "omi_zona": "E6",
+      "listings_count": 9,
+      "entire_home_share": 0.5555555555555556,
+      "professional_host_share": 0.4444444444444444,
+      "active_share": 0.2222222222222222,
+      "median_price": 85.0,
+      "omi_rent_2024": 7.732608695652174
+    },
+    {
+      "neighbourhood": "Muggiano",
+      "omi_zona": "E5",
+      "listings_count": 8,
+      "entire_home_share": 0.75,
+      "professional_host_share": 0.25,
+      "active_share": 0.5,
+      "median_price": 86.0,
+      "omi_rent_2024": 7.405555555555555
+    },
+    {
+      "neighbourhood": "Figino",
+      "omi_zona": "E6",
+      "listings_count": 8,
+      "entire_home_share": 0.875,
+      "professional_host_share": 0.25,
+      "active_share": 0.5,
+      "median_price": 69.0,
+      "omi_rent_2024": 7.732608695652174
+    },
+    {
+      "neighbourhood": "Parco Dei Navigli",
+      "omi_zona": "D21",
+      "listings_count": 8,
+      "entire_home_share": 0.875,
+      "professional_host_share": 0.75,
+      "active_share": 0.25,
+      "median_price": 120.0,
+      "omi_rent_2024": 10.578
+    },
+    {
+      "neighbourhood": "Parco Delle Abbazie",
+      "omi_zona": "E7",
+      "listings_count": 6,
+      "entire_home_share": 0.5,
+      "professional_host_share": 0.0,
+      "active_share": 0.3333333333333333,
+      "median_price": 93.0,
+      "omi_rent_2024": 6.269565217391304
+    },
+    {
+      "neighbourhood": "Cantalupa",
+      "omi_zona": "E7",
+      "listings_count": 6,
+      "entire_home_share": 0.8333333333333334,
+      "professional_host_share": 0.16666666666666666,
+      "active_share": 0.6666666666666666,
+      "median_price": 150.0,
+      "omi_rent_2024": 6.269565217391304
+    },
+    {
+      "neighbourhood": "Chiaravalle",
+      "omi_zona": "D39",
+      "listings_count": 4,
+      "entire_home_share": 0.75,
+      "professional_host_share": 0.0,
+      "active_share": 0.25,
+      "median_price": 69.5,
+      "omi_rent_2024": 11.4375
+    },
+    {
+      "neighbourhood": "Sacco",
+      "omi_zona": "E8",
+      "listings_count": 4,
+      "entire_home_share": 0.25,
+      "professional_host_share": 0.25,
+      "active_share": 0.25,
+      "median_price": 262.0,
+      "omi_rent_2024": 7.065217391304348
+    },
+    {
+      "neighbourhood": "Parco Nord",
+      "omi_zona": "D33",
+      "listings_count": 3,
+      "entire_home_share": 0.6666666666666666,
+      "professional_host_share": 0.0,
+      "active_share": 0.6666666666666666,
+      "median_price": 85.0,
+      "omi_rent_2024": 8.830434782608695
+    },
+    {
+      "neighbourhood": "Parco Agricolo Sud",
+      "omi_zona": "D40",
+      "listings_count": 3,
+      "entire_home_share": 1.0,
+      "professional_host_share": 0.0,
+      "active_share": 0.6666666666666666,
+      "median_price": 91.0,
+      "omi_rent_2024": 10.470833333333333
+    },
+    {
+      "neighbourhood": "Stephenson",
+      "omi_zona": "D30",
+      "listings_count": 3,
+      "entire_home_share": 1.0,
+      "professional_host_share": 0.3333333333333333,
+      "active_share": 1.0,
+      "median_price": 60.0,
+      "omi_rent_2024": 9.7
+    },
+    {
+      "neighbourhood": "Ronchetto Delle Rane",
+      "omi_zona": "D40",
+      "listings_count": 2,
+      "entire_home_share": 0.5,
+      "professional_host_share": 0.0,
+      "active_share": 0.0,
+      "median_price": 74.0,
+      "omi_rent_2024": 10.470833333333333
+    }
+  ]
+}

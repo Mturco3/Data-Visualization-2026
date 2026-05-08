@@ -4,3 +4,5 @@ Data_Viz/
 .vscode/
 venv/
 Output/
+src/io/
+.ipynb_checkpoints/
