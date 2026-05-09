@@ -1,0 +1,3145 @@
+{
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "neighbourhoods": [
+    {
+      "name": "Adriano",
+      "lat": 45.51196032161892,
+      "lng": 9.243128986481723,
+      "zona_omi": "D35",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.33
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.59
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.74
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.75
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 8.49
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": 10.67
+        },
+        "2024": {
+          "n_listings": 8,
+          "rent_mid": 10.89
+        }
+      }
+    },
+    {
+      "name": "Affori",
+      "lat": 45.514043135715504,
+      "lng": 9.173675190884506,
+      "zona_omi": "D32",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 6.81
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.99
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 7.19
+        },
+        "2021": {
+          "n_listings": 4,
+          "rent_mid": 7.3
+        },
+        "2022": {
+          "n_listings": 3,
+          "rent_mid": 8.02
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 9.28
+        },
+        "2024": {
+          "n_listings": 20,
+          "rent_mid": 10.16
+        }
+      }
+    },
+    {
+      "name": "Baggio",
+      "lat": 45.4609219697422,
+      "lng": 9.090350591841538,
+      "zona_omi": "E5",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.47
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.56
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.62
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 7.72
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.36
+        },
+        "2024": {
+          "n_listings": 6,
+          "rent_mid": 9.84
+        }
+      }
+    },
+    {
+      "name": "Bande Nere",
+      "lat": 45.46095082635827,
+      "lng": 9.139452406204196,
+      "zona_omi": "D25",
+      "by_year": {
+        "2018": {
+          "n_listings": 3,
+          "rent_mid": 7.32
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.7
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2022": {
+          "n_listings": 3,
+          "rent_mid": 8.7
+        },
+        "2023": {
+          "n_listings": 15,
+          "rent_mid": 10.81
+        },
+        "2024": {
+          "n_listings": 49,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Barona",
+      "lat": 45.433718301423475,
+      "lng": 9.156272373975119,
+      "zona_omi": "D21",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.64
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 8.73
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 8.99
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 8.49
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 9.53
+        },
+        "2023": {
+          "n_listings": 6,
+          "rent_mid": 11.25
+        },
+        "2024": {
+          "n_listings": 8,
+          "rent_mid": 12.06
+        }
+      }
+    },
+    {
+      "name": "Bicocca",
+      "lat": 45.517731327045766,
+      "lng": 9.211645873234556,
+      "zona_omi": "D34",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.49
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.71
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.83
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 8.12
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 9.07
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 11.4
+        },
+        "2024": {
+          "n_listings": 4,
+          "rent_mid": 12.21
+        }
+      }
+    },
+    {
+      "name": "Bovisa",
+      "lat": 45.50175277735743,
+      "lng": 9.165686987377006,
+      "zona_omi": "D31",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 6.65
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 6.91
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 7.29
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.47
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 7.9
+        },
+        "2023": {
+          "n_listings": 5,
+          "rent_mid": 10.45
+        },
+        "2024": {
+          "n_listings": 30,
+          "rent_mid": 11.31
+        }
+      }
+    },
+    {
+      "name": "Bovisasca",
+      "lat": 45.51694641071008,
+      "lng": 9.160786784439642,
+      "zona_omi": "D32",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.81
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.99
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.19
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.3
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 8.02
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.28
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 10.16
+        }
+      }
+    },
+    {
+      "name": "Brera",
+      "lat": 45.47508865844749,
+      "lng": 9.186820523189533,
+      "zona_omi": "B15",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 24.72
+        },
+        "2019": {
+          "n_listings": 5,
+          "rent_mid": 24.3
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 23.93
+        },
+        "2021": {
+          "n_listings": 6,
+          "rent_mid": 23.73
+        },
+        "2022": {
+          "n_listings": 23,
+          "rent_mid": 24.57
+        },
+        "2023": {
+          "n_listings": 33,
+          "rent_mid": 26.14
+        },
+        "2024": {
+          "n_listings": 66,
+          "rent_mid": 29.59
+        }
+      }
+    },
+    {
+      "name": "Bruzzano",
+      "lat": 45.52801050944373,
+      "lng": 9.172747226693762,
+      "zona_omi": "E8",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.94
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 6.01
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.22
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.28
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 6.63
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 7.58
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 8.15
+        }
+      }
+    },
+    {
+      "name": "Buenos Aires - Venezia",
+      "lat": 45.47797972575155,
+      "lng": 9.211683276397393,
+      "zona_omi": "C12",
+      "by_year": {
+        "2018": {
+          "n_listings": 2,
+          "rent_mid": 14.82
+        },
+        "2019": {
+          "n_listings": 5,
+          "rent_mid": 15.6
+        },
+        "2020": {
+          "n_listings": 3,
+          "rent_mid": 16.08
+        },
+        "2021": {
+          "n_listings": 7,
+          "rent_mid": 16.01
+        },
+        "2022": {
+          "n_listings": 27,
+          "rent_mid": 17.86
+        },
+        "2023": {
+          "n_listings": 63,
+          "rent_mid": 19.21
+        },
+        "2024": {
+          "n_listings": 141,
+          "rent_mid": 21.05
+        }
+      }
+    },
+    {
+      "name": "Cantalupa",
+      "lat": 45.42079432323876,
+      "lng": 9.160698534331546,
+      "zona_omi": "E7",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.95
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.01
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 6.37
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 6.75
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 7.14
+        }
+      }
+    },
+    {
+      "name": "Centrale",
+      "lat": 45.48635144195335,
+      "lng": 9.204854656286443,
+      "zona_omi": "C15",
+      "by_year": {
+        "2018": {
+          "n_listings": 2,
+          "rent_mid": 7.89
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 8.41
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 10.65
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 10.8
+        },
+        "2022": {
+          "n_listings": 16,
+          "rent_mid": 12.28
+        },
+        "2023": {
+          "n_listings": 22,
+          "rent_mid": 12.37
+        },
+        "2024": {
+          "n_listings": 68,
+          "rent_mid": 15.44
+        }
+      }
+    },
+    {
+      "name": "Chiaravalle",
+      "lat": 45.415971923997986,
+      "lng": 9.240084759156705,
+      "zona_omi": "D39",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 2,
+          "rent_mid": 17.0
+        }
+      }
+    },
+    {
+      "name": "Citta' Studi",
+      "lat": 45.47719022626023,
+      "lng": 9.23068520973223,
+      "zona_omi": "D12",
+      "by_year": {
+        "2018": {
+          "n_listings": 3,
+          "rent_mid": 8.7
+        },
+        "2019": {
+          "n_listings": 4,
+          "rent_mid": 8.91
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 9.05
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 9.38
+        },
+        "2022": {
+          "n_listings": 6,
+          "rent_mid": 10.61
+        },
+        "2023": {
+          "n_listings": 17,
+          "rent_mid": 13.09
+        },
+        "2024": {
+          "n_listings": 41,
+          "rent_mid": 13.57
+        }
+      }
+    },
+    {
+      "name": "Comasina",
+      "lat": 45.527220617747844,
+      "lng": 9.163245196808257,
+      "zona_omi": "D32",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.81
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.99
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.19
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.3
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 8.02
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.28
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 10.16
+        }
+      }
+    },
+    {
+      "name": "Corsica",
+      "lat": 45.46425810417523,
+      "lng": 9.230375084286202,
+      "zona_omi": "D12",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.7
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 8.91
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 9.05
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 9.38
+        },
+        "2022": {
+          "n_listings": 7,
+          "rent_mid": 10.61
+        },
+        "2023": {
+          "n_listings": 7,
+          "rent_mid": 13.09
+        },
+        "2024": {
+          "n_listings": 28,
+          "rent_mid": 13.57
+        }
+      }
+    },
+    {
+      "name": "De Angeli - Monte Rosa",
+      "lat": 45.47414196476134,
+      "lng": 9.148632331570688,
+      "zona_omi": "C17",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 13.93
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 14.33
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 14.79
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 14.75
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 15.33
+        },
+        "2023": {
+          "n_listings": 10,
+          "rent_mid": 18.39
+        },
+        "2024": {
+          "n_listings": 34,
+          "rent_mid": 19.53
+        }
+      }
+    },
+    {
+      "name": "Dergano",
+      "lat": 45.50198083873055,
+      "lng": 9.178416110690717,
+      "zona_omi": "D31",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.65
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 6.91
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.29
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.47
+        },
+        "2022": {
+          "n_listings": 5,
+          "rent_mid": 7.9
+        },
+        "2023": {
+          "n_listings": 11,
+          "rent_mid": 10.45
+        },
+        "2024": {
+          "n_listings": 31,
+          "rent_mid": 11.31
+        }
+      }
+    },
+    {
+      "name": "Duomo",
+      "lat": 45.46254567270094,
+      "lng": 9.187061214897225,
+      "zona_omi": "B12",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 30.27
+        },
+        "2019": {
+          "n_listings": 5,
+          "rent_mid": 29.55
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 28.96
+        },
+        "2021": {
+          "n_listings": 6,
+          "rent_mid": 28.77
+        },
+        "2022": {
+          "n_listings": 30,
+          "rent_mid": 29.05
+        },
+        "2023": {
+          "n_listings": 68,
+          "rent_mid": 32.06
+        },
+        "2024": {
+          "n_listings": 157,
+          "rent_mid": 33.73
+        }
+      }
+    },
+    {
+      "name": "Ex Om - Morivione",
+      "lat": 45.43987542935503,
+      "lng": 9.194638068553283,
+      "zona_omi": "D20",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.18
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 8.56
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 8.65
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 8.81
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 9.24
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": 11.54
+        },
+        "2024": {
+          "n_listings": 13,
+          "rent_mid": 12.21
+        }
+      }
+    },
+    {
+      "name": "Farini",
+      "lat": 45.49543803772327,
+      "lng": 9.176673723137274,
+      "zona_omi": "C16",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 9.22
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 9.76
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 10.15
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 10.4
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 10.94
+        },
+        "2023": {
+          "n_listings": 6,
+          "rent_mid": 12.73
+        },
+        "2024": {
+          "n_listings": 16,
+          "rent_mid": 15.19
+        }
+      }
+    },
+    {
+      "name": "Figino",
+      "lat": 45.493163886830416,
+      "lng": 9.074398512729532,
+      "zona_omi": "E6",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.46
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 7.86
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.79
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 10.04
+        }
+      }
+    },
+    {
+      "name": "Forze Armate",
+      "lat": 45.460889099345486,
+      "lng": 9.114077071183392,
+      "zona_omi": "D25",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 7.32
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.7
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 8.7
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": 10.81
+        },
+        "2024": {
+          "n_listings": 6,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Gallaratese",
+      "lat": 45.49665106818795,
+      "lng": 9.113283148469172,
+      "zona_omi": "E6",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 6.46
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 7.86
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.79
+        },
+        "2024": {
+          "n_listings": 20,
+          "rent_mid": 10.04
+        }
+      }
+    },
+    {
+      "name": "Garibaldi Repubblica",
+      "lat": 45.48297967072136,
+      "lng": 9.19039785782793,
+      "zona_omi": "C14",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 34.6
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 30.14
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 29.57
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 29.4
+        },
+        "2022": {
+          "n_listings": 7,
+          "rent_mid": 29.85
+        },
+        "2023": {
+          "n_listings": 9,
+          "rent_mid": 30.75
+        },
+        "2024": {
+          "n_listings": 26,
+          "rent_mid": 32.44
+        }
+      }
+    },
+    {
+      "name": "Ghisolfa",
+      "lat": 45.49015143695465,
+      "lng": 9.162349266037864,
+      "zona_omi": "C16",
+      "by_year": {
+        "2018": {
+          "n_listings": 2,
+          "rent_mid": 9.22
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 9.76
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 10.15
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 10.4
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 10.94
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 12.73
+        },
+        "2024": {
+          "n_listings": 32,
+          "rent_mid": 15.19
+        }
+      }
+    },
+    {
+      "name": "Giambellino",
+      "lat": 45.45009493131538,
+      "lng": 9.145215262888946,
+      "zona_omi": "D25",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 7.32
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 7.61
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 7.7
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2022": {
+          "n_listings": 8,
+          "rent_mid": 8.7
+        },
+        "2023": {
+          "n_listings": 11,
+          "rent_mid": 10.81
+        },
+        "2024": {
+          "n_listings": 40,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Giardini Porta Venezia",
+      "lat": 45.475238936736616,
+      "lng": 9.201870815898282,
+      "zona_omi": "B18",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 18.13
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 18.66
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 19.21
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 18.75
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 19.74
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": 21.17
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 24.88
+        }
+      }
+    },
+    {
+      "name": "Gratosoglio - Ticinello",
+      "lat": 45.41441832470112,
+      "lng": 9.173153802972225,
+      "zona_omi": "E7",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.95
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 6.01
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 6.37
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 6.75
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 7.14
+        }
+      }
+    },
+    {
+      "name": "Greco",
+      "lat": 45.5025420084722,
+      "lng": 9.207196340277154,
+      "zona_omi": "D34",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.49
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.71
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.83
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 8.12
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 9.07
+        },
+        "2023": {
+          "n_listings": 8,
+          "rent_mid": 11.4
+        },
+        "2024": {
+          "n_listings": 19,
+          "rent_mid": 12.21
+        }
+      }
+    },
+    {
+      "name": "Guastalla",
+      "lat": 45.46077620456901,
+      "lng": 9.201517240295956,
+      "zona_omi": "B13",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 19.63
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 19.79
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 20.23
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 20.02
+        },
+        "2022": {
+          "n_listings": 10,
+          "rent_mid": 20.44
+        },
+        "2023": {
+          "n_listings": 19,
+          "rent_mid": 21.47
+        },
+        "2024": {
+          "n_listings": 53,
+          "rent_mid": 24.11
+        }
+      }
+    },
+    {
+      "name": "Isola",
+      "lat": 45.49031594354717,
+      "lng": 9.188658422009155,
+      "zona_omi": "C14",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 34.6
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 30.14
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 29.57
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 29.4
+        },
+        "2022": {
+          "n_listings": 9,
+          "rent_mid": 29.85
+        },
+        "2023": {
+          "n_listings": 26,
+          "rent_mid": 30.75
+        },
+        "2024": {
+          "n_listings": 60,
+          "rent_mid": 32.44
+        }
+      }
+    },
+    {
+      "name": "Lambrate",
+      "lat": 45.47899970760057,
+      "lng": 9.244509673125155,
+      "zona_omi": "D13",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 6.21
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.95
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.03
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 8.04
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": 9.43
+        },
+        "2024": {
+          "n_listings": 12,
+          "rent_mid": 11.36
+        }
+      }
+    },
+    {
+      "name": "Lodi - Corvetto",
+      "lat": 45.44130023235884,
+      "lng": 9.22070146022982,
+      "zona_omi": "D16",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.75
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.44
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.67
+        },
+        "2021": {
+          "n_listings": 5,
+          "rent_mid": 8.17
+        },
+        "2022": {
+          "n_listings": 7,
+          "rent_mid": 9.82
+        },
+        "2023": {
+          "n_listings": 14,
+          "rent_mid": 11.4
+        },
+        "2024": {
+          "n_listings": 43,
+          "rent_mid": 11.79
+        }
+      }
+    },
+    {
+      "name": "Lorenteggio",
+      "lat": 45.453200003202994,
+      "lng": 9.122021473598531,
+      "zona_omi": "D25",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.32
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.61
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.7
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.61
+        },
+        "2022": {
+          "n_listings": 3,
+          "rent_mid": 8.7
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": 10.81
+        },
+        "2024": {
+          "n_listings": 10,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Loreto",
+      "lat": 45.49070958691009,
+      "lng": 9.220376896005106,
+      "zona_omi": "C12",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 14.82
+        },
+        "2019": {
+          "n_listings": 5,
+          "rent_mid": 15.6
+        },
+        "2020": {
+          "n_listings": 3,
+          "rent_mid": 16.08
+        },
+        "2021": {
+          "n_listings": 6,
+          "rent_mid": 16.01
+        },
+        "2022": {
+          "n_listings": 20,
+          "rent_mid": 17.86
+        },
+        "2023": {
+          "n_listings": 20,
+          "rent_mid": 19.21
+        },
+        "2024": {
+          "n_listings": 53,
+          "rent_mid": 21.05
+        }
+      }
+    },
+    {
+      "name": "Maciachini - Maggiolina",
+      "lat": 45.49746012981012,
+      "lng": 9.197518535355842,
+      "zona_omi": "D36",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.06
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 8.36
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 8.52
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 8.68
+        },
+        "2022": {
+          "n_listings": 9,
+          "rent_mid": 9.36
+        },
+        "2023": {
+          "n_listings": 7,
+          "rent_mid": 11.04
+        },
+        "2024": {
+          "n_listings": 44,
+          "rent_mid": 11.93
+        }
+      }
+    },
+    {
+      "name": "Magenta - S. Vittore",
+      "lat": 45.46308448211456,
+      "lng": 9.171606607478093,
+      "zona_omi": "B16",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 22.48
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 22.15
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 21.89
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 22.01
+        },
+        "2022": {
+          "n_listings": 10,
+          "rent_mid": 22.22
+        },
+        "2023": {
+          "n_listings": 27,
+          "rent_mid": 23.98
+        },
+        "2024": {
+          "n_listings": 53,
+          "rent_mid": 27.02
+        }
+      }
+    },
+    {
+      "name": "Maggiore - Musocco",
+      "lat": 45.50644274193123,
+      "lng": 9.114429846967065,
+      "zona_omi": "D30",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.26
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.65
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.69
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 8.18
+        },
+        "2023": {
+          "n_listings": 5,
+          "rent_mid": 10.36
+        },
+        "2024": {
+          "n_listings": 7,
+          "rent_mid": 10.85
+        }
+      }
+    },
+    {
+      "name": "Mecenate",
+      "lat": 45.45353964394734,
+      "lng": 9.244637331328299,
+      "zona_omi": "D15",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.12
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 6.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.86
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.91
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 7.79
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": 9.68
+        },
+        "2024": {
+          "n_listings": 9,
+          "rent_mid": 10.19
+        }
+      }
+    },
+    {
+      "name": "Muggiano",
+      "lat": 45.45088057476965,
+      "lng": 9.070335747553253,
+      "zona_omi": "E5",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.47
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.56
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.62
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 7.72
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": 9.36
+        },
+        "2024": {
+          "n_listings": 2,
+          "rent_mid": 9.84
+        }
+      }
+    },
+    {
+      "name": "Navigli",
+      "lat": 45.45035858954168,
+      "lng": 9.170842049850577,
+      "zona_omi": "C18",
+      "by_year": {
+        "2018": {
+          "n_listings": 2,
+          "rent_mid": 9.97
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 10.45
+        },
+        "2020": {
+          "n_listings": 4,
+          "rent_mid": 10.88
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 11.09
+        },
+        "2022": {
+          "n_listings": 14,
+          "rent_mid": 12.24
+        },
+        "2023": {
+          "n_listings": 15,
+          "rent_mid": 15.34
+        },
+        "2024": {
+          "n_listings": 70,
+          "rent_mid": 17.18
+        }
+      }
+    },
+    {
+      "name": "Niguarda - Ca' Granda",
+      "lat": 45.51509581430879,
+      "lng": 9.19715876210607,
+      "zona_omi": "D33",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.39
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.72
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 7.83
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.89
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 8.44
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": 10.28
+        },
+        "2024": {
+          "n_listings": 8,
+          "rent_mid": 11.41
+        }
+      }
+    },
+    {
+      "name": "Ortomercato",
+      "lat": 45.45304150301721,
+      "lng": 9.225724502528031,
+      "zona_omi": "D15",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.12
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.45
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 6.86
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.91
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 7.79
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.68
+        },
+        "2024": {
+          "n_listings": 6,
+          "rent_mid": 10.19
+        }
+      }
+    },
+    {
+      "name": "Padova",
+      "lat": 45.50127902298557,
+      "lng": 9.231441266594063,
+      "zona_omi": "D10",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.43
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.8
+        },
+        "2020": {
+          "n_listings": 3,
+          "rent_mid": 7.73
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.65
+        },
+        "2022": {
+          "n_listings": 6,
+          "rent_mid": 8.46
+        },
+        "2023": {
+          "n_listings": 7,
+          "rent_mid": 10.59
+        },
+        "2024": {
+          "n_listings": 32,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Pagano",
+      "lat": 45.47423272891052,
+      "lng": 9.16276747139507,
+      "zona_omi": "C17",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 13.93
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 14.33
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 14.79
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 14.75
+        },
+        "2022": {
+          "n_listings": 3,
+          "rent_mid": 15.33
+        },
+        "2023": {
+          "n_listings": 14,
+          "rent_mid": 18.39
+        },
+        "2024": {
+          "n_listings": 20,
+          "rent_mid": 19.53
+        }
+      }
+    },
+    {
+      "name": "Parco Agricolo Sud",
+      "lat": 45.450554999999994,
+      "lng": 9.068415,
+      "zona_omi": "D40",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 12.05
+        }
+      }
+    },
+    {
+      "name": "Parco Bosco In Citt",
+      "lat": 45.47539025,
+      "lng": 9.090102725,
+      "zona_omi": "E6",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.46
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 7.86
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": 9.79
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 10.04
+        }
+      }
+    },
+    {
+      "name": "Parco Dei Navigli",
+      "lat": 45.41685666666667,
+      "lng": 9.16298,
+      "zona_omi": "D21",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.64
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 8.73
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 8.99
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 8.49
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 9.53
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 11.25
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 12.06
+        }
+      }
+    },
+    {
+      "name": "Parco Delle Abbazie",
+      "lat": 45.408509052296345,
+      "lng": 9.204930205677476,
+      "zona_omi": "E7",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.95
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 5.97
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.01
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 6.37
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 6.75
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 7.14
+        }
+      }
+    },
+    {
+      "name": "Parco Forlanini - Ortica",
+      "lat": 45.467963106377745,
+      "lng": 9.247641538975904,
+      "zona_omi": "D15",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.12
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.86
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.91
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 7.79
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.68
+        },
+        "2024": {
+          "n_listings": 4,
+          "rent_mid": 10.19
+        }
+      }
+    },
+    {
+      "name": "Parco Lambro - Cimiano",
+      "lat": 45.49230368287977,
+      "lng": 9.239711944099458,
+      "zona_omi": "D10",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.43
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.8
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 7.73
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.65
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 8.46
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 10.59
+        },
+        "2024": {
+          "n_listings": 12,
+          "rent_mid": 11.59
+        }
+      }
+    },
+    {
+      "name": "Parco Monlue' - Ponte Lambro",
+      "lat": 45.44374093167157,
+      "lng": 9.263571018693217,
+      "zona_omi": "D37",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 11.96
+        }
+      }
+    },
+    {
+      "name": "Parco Nord",
+      "lat": 45.52274471051597,
+      "lng": 9.184558336802324,
+      "zona_omi": "D33",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.39
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.72
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.83
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.89
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 8.44
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 10.28
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 11.41
+        }
+      }
+    },
+    {
+      "name": "Parco Sempione",
+      "lat": 45.47616392410959,
+      "lng": 9.177350347727568,
+      "zona_omi": "B17",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 17.71
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 17.79
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 17.7
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 17.52
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 17.78
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": 19.53
+        },
+        "2024": {
+          "n_listings": 5,
+          "rent_mid": 21.84
+        }
+      }
+    },
+    {
+      "name": "Porta Romana",
+      "lat": 45.4506212377433,
+      "lng": 9.204614144207435,
+      "zona_omi": "B19",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 19.46
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 19.42
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 19.34
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 18.97
+        },
+        "2022": {
+          "n_listings": 11,
+          "rent_mid": 18.68
+        },
+        "2023": {
+          "n_listings": 10,
+          "rent_mid": 19.39
+        },
+        "2024": {
+          "n_listings": 48,
+          "rent_mid": 23.58
+        }
+      }
+    },
+    {
+      "name": "Portello",
+      "lat": 45.48557161935344,
+      "lng": 9.154700885066722,
+      "zona_omi": "D28",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 9.49
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 9.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 9.59
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 9.79
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 10.59
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 11.4
+        },
+        "2024": {
+          "n_listings": 8,
+          "rent_mid": 12.09
+        }
+      }
+    },
+    {
+      "name": "Qt 8",
+      "lat": 45.48568656747401,
+      "lng": 9.14005251705521,
+      "zona_omi": "D28",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 9.49
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 9.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 9.59
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 9.79
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 10.59
+        },
+        "2023": {
+          "n_listings": 5,
+          "rent_mid": 11.4
+        },
+        "2024": {
+          "n_listings": 5,
+          "rent_mid": 12.09
+        }
+      }
+    },
+    {
+      "name": "Quarto Cagnino",
+      "lat": 45.473843227316884,
+      "lng": 9.112685773584923,
+      "zona_omi": "E5",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.47
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.56
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.62
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 7.72
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": 9.36
+        },
+        "2024": {
+          "n_listings": 9,
+          "rent_mid": 9.84
+        }
+      }
+    },
+    {
+      "name": "Quarto Oggiaro",
+      "lat": 45.512527896153976,
+      "lng": 9.137882032667378,
+      "zona_omi": "E8",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.94
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.01
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.22
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.28
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 6.63
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 7.58
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 8.15
+        }
+      }
+    },
+    {
+      "name": "Quinto Romano",
+      "lat": 45.477693721534216,
+      "lng": 9.09022163062946,
+      "zona_omi": "E5",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.47
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.56
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.62
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 7.72
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 9.36
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 9.84
+        }
+      }
+    },
+    {
+      "name": "Quintosole",
+      "lat": 45.4042389415676,
+      "lng": 9.205093267954771,
+      "zona_omi": "D38",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 12.4
+        }
+      }
+    },
+    {
+      "name": "Ripamonti",
+      "lat": 45.43117805014603,
+      "lng": 9.20099949377636,
+      "zona_omi": "D18",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.19
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.35
+        },
+        "2020": {
+          "n_listings": 3,
+          "rent_mid": 6.51
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.66
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 7.67
+        },
+        "2023": {
+          "n_listings": 6,
+          "rent_mid": 9.32
+        },
+        "2024": {
+          "n_listings": 14,
+          "rent_mid": 11.32
+        }
+      }
+    },
+    {
+      "name": "Rogoredo",
+      "lat": 45.43368797121357,
+      "lng": 9.243787040686,
+      "zona_omi": "D37",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 1,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 9,
+          "rent_mid": 11.96
+        }
+      }
+    },
+    {
+      "name": "Ronchetto Delle Rane",
+      "lat": 45.40137152025322,
+      "lng": 9.181022819207964,
+      "zona_omi": "D40",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 12.05
+        }
+      }
+    },
+    {
+      "name": "Ronchetto Sul Naviglio",
+      "lat": 45.44104522003069,
+      "lng": 9.140790304191267,
+      "zona_omi": "D21",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.64
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 8.73
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 8.99
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 8.49
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 9.53
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": 11.25
+        },
+        "2024": {
+          "n_listings": 16,
+          "rent_mid": 12.06
+        }
+      }
+    },
+    {
+      "name": "S. Cristoforo",
+      "lat": 45.44289373093847,
+      "lng": 9.156772212848264,
+      "zona_omi": "C18",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 9.97
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 10.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 10.88
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 11.09
+        },
+        "2022": {
+          "n_listings": 5,
+          "rent_mid": 12.24
+        },
+        "2023": {
+          "n_listings": 12,
+          "rent_mid": 15.34
+        },
+        "2024": {
+          "n_listings": 31,
+          "rent_mid": 17.18
+        }
+      }
+    },
+    {
+      "name": "S. Siro",
+      "lat": 45.47531439400564,
+      "lng": 9.125196740095408,
+      "zona_omi": "D24",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.59
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 8.57
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 8.57
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 8.73
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 10.29
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 11.32
+        },
+        "2024": {
+          "n_listings": 5,
+          "rent_mid": 12.91
+        }
+      }
+    },
+    {
+      "name": "Sacco",
+      "lat": 45.51902285,
+      "lng": 9.12203835,
+      "zona_omi": "E8",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 5.94
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.01
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.22
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 6.28
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 6.63
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 7.58
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 8.15
+        }
+      }
+    },
+    {
+      "name": "Sarpi",
+      "lat": 45.48194736772393,
+      "lng": 9.17185987535071,
+      "zona_omi": "C16",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 9.22
+        },
+        "2019": {
+          "n_listings": 3,
+          "rent_mid": 9.76
+        },
+        "2020": {
+          "n_listings": 5,
+          "rent_mid": 10.15
+        },
+        "2021": {
+          "n_listings": 5,
+          "rent_mid": 10.4
+        },
+        "2022": {
+          "n_listings": 12,
+          "rent_mid": 10.94
+        },
+        "2023": {
+          "n_listings": 24,
+          "rent_mid": 12.73
+        },
+        "2024": {
+          "n_listings": 87,
+          "rent_mid": 15.19
+        }
+      }
+    },
+    {
+      "name": "Scalo Romana",
+      "lat": 45.440759376847,
+      "lng": 9.209486470471344,
+      "zona_omi": "C19",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 9.65
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 10.42
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 11.2
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 11.32
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 11.91
+        },
+        "2023": {
+          "n_listings": 4,
+          "rent_mid": 14.21
+        },
+        "2024": {
+          "n_listings": 23,
+          "rent_mid": 16.38
+        }
+      }
+    },
+    {
+      "name": "Selinunte",
+      "lat": 45.47071820048378,
+      "lng": 9.138470443001431,
+      "zona_omi": "D24",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 8.59
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 8.57
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 8.57
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 8.73
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 10.29
+        },
+        "2023": {
+          "n_listings": 3,
+          "rent_mid": 11.32
+        },
+        "2024": {
+          "n_listings": 23,
+          "rent_mid": 12.91
+        }
+      }
+    },
+    {
+      "name": "Stadera",
+      "lat": 45.433503184090945,
+      "lng": 9.177856788571697,
+      "zona_omi": "D18",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 6.19
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 6.35
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.51
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 6.66
+        },
+        "2022": {
+          "n_listings": 6,
+          "rent_mid": 7.67
+        },
+        "2023": {
+          "n_listings": 11,
+          "rent_mid": 9.32
+        },
+        "2024": {
+          "n_listings": 22,
+          "rent_mid": 11.32
+        }
+      }
+    },
+    {
+      "name": "Stephenson",
+      "lat": 45.51279583031792,
+      "lng": 9.116783133568726,
+      "zona_omi": "D30",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.26
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.65
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 7.69
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 8.18
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 10.36
+        },
+        "2024": {
+          "n_listings": 0,
+          "rent_mid": 10.85
+        }
+      }
+    },
+    {
+      "name": "Tibaldi",
+      "lat": 45.440268521617504,
+      "lng": 9.179544002139599,
+      "zona_omi": "C19",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 9.65
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 10.42
+        },
+        "2020": {
+          "n_listings": 2,
+          "rent_mid": 11.2
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 11.32
+        },
+        "2022": {
+          "n_listings": 2,
+          "rent_mid": 11.91
+        },
+        "2023": {
+          "n_listings": 8,
+          "rent_mid": 14.21
+        },
+        "2024": {
+          "n_listings": 17,
+          "rent_mid": 16.38
+        }
+      }
+    },
+    {
+      "name": "Ticinese",
+      "lat": 45.45183020801618,
+      "lng": 9.179677184014677,
+      "zona_omi": "B21",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 13.61
+        },
+        "2019": {
+          "n_listings": 6,
+          "rent_mid": 13.75
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 14.21
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 14.14
+        },
+        "2022": {
+          "n_listings": 11,
+          "rent_mid": 14.53
+        },
+        "2023": {
+          "n_listings": 28,
+          "rent_mid": 16.97
+        },
+        "2024": {
+          "n_listings": 71,
+          "rent_mid": 17.94
+        }
+      }
+    },
+    {
+      "name": "Tortona",
+      "lat": 45.45426721043272,
+      "lng": 9.16260303149093,
+      "zona_omi": "C18",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 9.97
+        },
+        "2019": {
+          "n_listings": 4,
+          "rent_mid": 10.45
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 10.88
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 11.09
+        },
+        "2022": {
+          "n_listings": 7,
+          "rent_mid": 12.24
+        },
+        "2023": {
+          "n_listings": 12,
+          "rent_mid": 15.34
+        },
+        "2024": {
+          "n_listings": 38,
+          "rent_mid": 17.18
+        }
+      }
+    },
+    {
+      "name": "Tre Torri",
+      "lat": 45.47512854301087,
+      "lng": 9.15695374251874,
+      "zona_omi": "C13",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 30.95
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 30.54
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 30.67
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 30.38
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": 31.5
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": 32.88
+        },
+        "2024": {
+          "n_listings": 3,
+          "rent_mid": 34.0
+        }
+      }
+    },
+    {
+      "name": "Trenno",
+      "lat": 45.49310122118505,
+      "lng": 9.10116199118042,
+      "zona_omi": "E6",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 6.46
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 6.68
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 6.84
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 6.84
+        },
+        "2022": {
+          "n_listings": 1,
+          "rent_mid": 7.86
+        },
+        "2023": {
+          "n_listings": 2,
+          "rent_mid": 9.79
+        },
+        "2024": {
+          "n_listings": 1,
+          "rent_mid": 10.04
+        }
+      }
+    },
+    {
+      "name": "Triulzo Superiore",
+      "lat": 45.42792572097963,
+      "lng": 9.249023758919162,
+      "zona_omi": "D39",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2022": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2023": {
+          "n_listings": 0,
+          "rent_mid": null
+        },
+        "2024": {
+          "n_listings": 2,
+          "rent_mid": 17.0
+        }
+      }
+    },
+    {
+      "name": "Umbria - Molise",
+      "lat": 45.45195600108646,
+      "lng": 9.218415611949704,
+      "zona_omi": "C20",
+      "by_year": {
+        "2018": {
+          "n_listings": 1,
+          "rent_mid": 11.79
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 12.57
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 12.92
+        },
+        "2021": {
+          "n_listings": 0,
+          "rent_mid": 12.88
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 13.38
+        },
+        "2023": {
+          "n_listings": 11,
+          "rent_mid": 13.76
+        },
+        "2024": {
+          "n_listings": 27,
+          "rent_mid": 16.16
+        }
+      }
+    },
+    {
+      "name": "Viale Monza",
+      "lat": 45.511927868170396,
+      "lng": 9.225797509359255,
+      "zona_omi": "D35",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.33
+        },
+        "2019": {
+          "n_listings": 0,
+          "rent_mid": 7.59
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.74
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 7.75
+        },
+        "2022": {
+          "n_listings": 4,
+          "rent_mid": 8.49
+        },
+        "2023": {
+          "n_listings": 12,
+          "rent_mid": 10.67
+        },
+        "2024": {
+          "n_listings": 19,
+          "rent_mid": 10.89
+        }
+      }
+    },
+    {
+      "name": "Vigentina",
+      "lat": 45.451754863552615,
+      "lng": 9.1936519978828,
+      "zona_omi": "B20",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 16.69
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 16.7
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 16.59
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 16.29
+        },
+        "2022": {
+          "n_listings": 9,
+          "rent_mid": 16.91
+        },
+        "2023": {
+          "n_listings": 20,
+          "rent_mid": 18.31
+        },
+        "2024": {
+          "n_listings": 30,
+          "rent_mid": 20.65
+        }
+      }
+    },
+    {
+      "name": "Villapizzone",
+      "lat": 45.49603720850502,
+      "lng": 9.145942831527972,
+      "zona_omi": "D30",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 7.26
+        },
+        "2019": {
+          "n_listings": 1,
+          "rent_mid": 7.45
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 7.65
+        },
+        "2021": {
+          "n_listings": 1,
+          "rent_mid": 7.69
+        },
+        "2022": {
+          "n_listings": 9,
+          "rent_mid": 8.18
+        },
+        "2023": {
+          "n_listings": 8,
+          "rent_mid": 10.36
+        },
+        "2024": {
+          "n_listings": 46,
+          "rent_mid": 10.85
+        }
+      }
+    },
+    {
+      "name": "Washington",
+      "lat": 45.461725958184175,
+      "lng": 9.155743434311972,
+      "zona_omi": "C17",
+      "by_year": {
+        "2018": {
+          "n_listings": 0,
+          "rent_mid": 13.93
+        },
+        "2019": {
+          "n_listings": 2,
+          "rent_mid": 14.33
+        },
+        "2020": {
+          "n_listings": 0,
+          "rent_mid": 14.79
+        },
+        "2021": {
+          "n_listings": 2,
+          "rent_mid": 14.75
+        },
+        "2022": {
+          "n_listings": 7,
+          "rent_mid": 15.33
+        },
+        "2023": {
+          "n_listings": 7,
+          "rent_mid": 18.39
+        },
+        "2024": {
+          "n_listings": 34,
+          "rent_mid": 19.53
+        }
+      }
+    },
+    {
+      "name": "Xxii Marzo",
+      "lat": 45.46222789067299,
+      "lng": 9.212461272473366,
+      "zona_omi": "C20",
+      "by_year": {
+        "2018": {
+          "n_listings": 2,
+          "rent_mid": 11.79
+        },
+        "2019": {
+          "n_listings": 3,
+          "rent_mid": 12.57
+        },
+        "2020": {
+          "n_listings": 1,
+          "rent_mid": 12.92
+        },
+        "2021": {
+          "n_listings": 3,
+          "rent_mid": 12.88
+        },
+        "2022": {
+          "n_listings": 15,
+          "rent_mid": 13.38
+        },
+        "2023": {
+          "n_listings": 18,
+          "rent_mid": 13.76
+        },
+        "2024": {
+          "n_listings": 41,
+          "rent_mid": 16.16
+        }
+      }
+    }
+  ]
+}

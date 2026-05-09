@@ -1,38 +1,19 @@
 <!DOCTYPE html>
-<!-- The standard declaration telling the browser this is an HTML5 document -->
 <html lang="en">
 
 <head>
-  <!-- Character encoding: allows Italian accents and special characters -->
   <meta charset="UTF-8">
-
-  <!-- Makes the page scale correctly on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- The tab title shown in the browser -->
   <title>Airbnb & the Milan Rental Market</title>
-
-  <!-- Link to our external CSS file (visual styling lives there) -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font: Playfair Display for headings (elegant, editorial feel) -->
-  <!-- Inter for body text (clean, readable) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ============================================================
-       NAVIGATION BAR
-       Fixed bar at the top so users can jump to any section.
-       The JS file will highlight the current section as you scroll.
-  ============================================================ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <!-- Small logo / brand mark -->
       <span class="nav-brand">Milan &times; Airbnb</span>
-
-      <!-- Navigation links — href values match the id of each section below -->
       <ul class="nav-links">
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#data">Data</a></li>
@@ -45,13 +26,6 @@
     </div>
   </nav>
 
-
-  <!-- ============================================================
-       HERO SECTION
-       Full-screen opening banner with the project title.
-       The animated counter cards (driven by main.js) give visitors
-       three key numbers at a glance before they read anything.
-  ============================================================ -->
   <header id="hero">
     <div class="hero-content">
       <p class="hero-eyebrow">Data Visualisation Project &mdash; 2026</p>
@@ -60,47 +34,28 @@
         Exploring the spatial and temporal correlation between short-term rentals
         and long-term rent prices in Milan (2018&ndash;2024)
       </p>
-
-      <!-- Three animated counters — numbers are set in main.js -->
       <div class="stat-cards">
-
-        <!-- Each card has a "data-target" attribute.
-             main.js reads that number and counts up to it on page load. -->
         <div class="stat-card">
           <span class="stat-number" data-target="22948">0</span>
           <span class="stat-label">Listings in the current snapshot</span>
         </div>
-
         <div class="stat-card">
           <span class="stat-number" data-target="87">0</span>
           <span class="stat-label">Neighbourhoods analysed</span>
         </div>
-
         <div class="stat-card">
           <span class="stat-number" data-target="7">0</span>
           <span class="stat-label">Overlapping years (2018&ndash;2024)</span>
         </div>
-
-      </div><!-- end .stat-cards -->
-
-      <!-- Scroll cue arrow -->
+      </div>
       <a href="#intro" class="scroll-cue" aria-label="Scroll down">&#8595;</a>
     </div>
   </header>
 
-
-  <!-- ============================================================
-       INTRODUCTION
-       Plain-language overview for non-expert readers.
-  ============================================================ -->
   <section id="intro" class="section section--light">
     <div class="container">
-
       <h2 class="section-title">Introduction</h2>
-
-      <!-- "pill" tag labels the audience -->
       <span class="tag">Urban planners &amp; citizens</span>
-
       <p>
         Over the past decade, platforms like Airbnb have transformed how people travel
         and, crucially, how cities allocate their housing stock. In Milan &mdash;
@@ -108,46 +63,30 @@
         number of active short-term rental listings has grown dramatically since 2018,
         raising a pressing question for residents and policymakers alike:
       </p>
-
-      <!-- Highlighted central question, visually separated -->
       <blockquote class="central-question">
         How has the rise of short-term rentals reshaped Milan's urban housing landscape
         between 2018 and 2024, and is there a measurable spatial and temporal correlation
         with the long-term rental market?
       </blockquote>
-
       <p>
         This project uses Milan as a case study of a broader European phenomenon.
         We combine two public datasets &mdash; Airbnb listing data and OMI official
         rent estimates from the Italian Revenue Agency &mdash; to map where short-term
         rental pressure is highest and whether those same areas show rising long-term rents.
       </p>
-
-      <!-- Honest framing: what we can and cannot claim -->
       <div class="callout callout--gold">
         <strong>Honest scope:</strong> We measure <em>market pressure</em>
         (correlation between Airbnb growth and rent levels), not direct displacement.
         Displacement would require eviction or registry data we do not have.
         The distinction is a key theme in the White / Black Hat section below.
       </div>
-
     </div>
   </section>
 
-
-  <!-- ============================================================
-       DATA SECTION
-       Describes each dataset: source, coverage, limitations.
-  ============================================================ -->
   <section id="data" class="section section--dark">
     <div class="container">
-
       <h2 class="section-title">Data Sources</h2>
-
-      <!-- Two dataset cards side by side (CSS flex) -->
       <div class="dataset-grid">
-
-        <!-- Dataset card 1 -->
         <div class="dataset-card">
           <div class="dataset-icon">A</div>
           <h3>Inside Airbnb &mdash; Milan</h3>
@@ -155,12 +94,9 @@
             <li><strong>What:</strong> Listing-level snapshot downloaded in 2025 plus review history used for the 2018&ndash;2024 overlap</li>
             <li><strong>Granularity:</strong> Individual listing &rarr; aggregated by neighbourhood</li>
             <li><strong>Key fields:</strong> host_id, room_type, price, reviews_per_month, license (CIN)</li>
-            <li><strong>Limitations:</strong> Scraped data; availability calendars can be unreliable;
-              no direct revenue figures</li>
+            <li><strong>Limitations:</strong> Scraped data; availability calendars can be unreliable; no direct revenue figures</li>
           </ul>
         </div>
-
-        <!-- Dataset card 2 -->
         <div class="dataset-card">
           <div class="dataset-icon">O</div>
           <h3>OMI &mdash; Agenzia delle Entrate</h3>
@@ -168,40 +104,23 @@
             <li><strong>What:</strong> Official rent-range estimates per OMI zone, every semester</li>
             <li><strong>Granularity:</strong> OMI zone &rarr; mapped to Airbnb neighbourhoods by us</li>
             <li><strong>Key fields:</strong> zona_omi, typology, rent_min, rent_max, semester</li>
-            <li><strong>Limitations:</strong> Ranges (not transactions); zone boundaries differ from
-              neighbourhood boundaries; some zones merged over time</li>
+            <li><strong>Limitations:</strong> Ranges (not transactions); zone boundaries differ from neighbourhood boundaries; some zones merged over time</li>
           </ul>
         </div>
-
-      </div><!-- end .dataset-grid -->
-
-      <!-- Mapping note -->
+      </div>
       <div class="callout callout--red">
         <strong>Custom mapping:</strong> OMI zones and Airbnb neighbourhoods use different boundary
         systems. We therefore use a curated crosswalk table that links each Airbnb neighbourhood
         name to an OMI zone before attaching official rent context to the listing snapshot.
       </div>
-
     </div>
   </section>
 
-
-  <!-- ============================================================
-       TASK ANALYSIS
-       The five analytical tasks driving the visualisation choices.
-       Each card is expandable via JS (click to reveal detail).
-  ============================================================ -->
   <section id="tasks" class="section section--light">
     <div class="container">
-
       <h2 class="section-title">Analytical Tasks</h2>
-      <p class="section-intro">
-        Click any task card to expand the design rationale.
-      </p>
-
-      <!-- Task cards — JS adds/removes the "open" class on click -->
+      <p class="section-intro">Click any task card to expand the design rationale.</p>
       <div class="task-list">
-
         <div class="task-card" data-task="1">
           <div class="task-header">
             <span class="task-num">T1</span>
@@ -209,13 +128,10 @@
             <span class="task-toggle">+</span>
           </div>
           <div class="task-body">
-            <p>Where is the current Airbnb stock concentrated, and which neighbourhoods remain the
-               main pressure hotspots when we compare them side by side? Answered by the
-               <strong>choropleth map</strong> (viz 1) and the
-               <strong>heatmap</strong> (viz 4).</p>
+            <p>Where is the current Airbnb stock concentrated? Answered by the
+               <strong>choropleth map</strong> (viz 1) and the <strong>heatmap</strong> (viz 4).</p>
           </div>
         </div>
-
         <div class="task-card" data-task="2">
           <div class="task-header">
             <span class="task-num">T2</span>
@@ -223,11 +139,10 @@
             <span class="task-toggle">+</span>
           </div>
           <div class="task-body">
-            <p>Do neighbourhoods with more Airbnb listings also sit in a more expensive official
-               rent context in 2024? Answered by the <strong>scatter plot</strong> (viz 2).</p>
+            <p>Do neighbourhoods with more listings sit in a more expensive rent context?
+               Answered by the <strong>scatter plot</strong> (viz 2).</p>
           </div>
         </div>
-
         <div class="task-card" data-task="3">
           <div class="task-header">
             <span class="task-num">T3</span>
@@ -235,11 +150,10 @@
             <span class="task-toggle">+</span>
           </div>
           <div class="task-body">
-            <p>Which neighbourhoods combine a large Airbnb stock with a high linked OMI rent level?
+            <p>Which neighbourhoods combine dense Airbnb stock with high rents?
                Answered by the <strong>pressure grid</strong> (viz 5).</p>
           </div>
         </div>
-
         <div class="task-card" data-task="4">
           <div class="task-header">
             <span class="task-num">T4</span>
@@ -247,11 +161,10 @@
             <span class="task-toggle">+</span>
           </div>
           <div class="task-body">
-            <p>How commercialized is the current stock, and how widespread is formal license declaration?
+            <p>How commercialized is the current stock?
                Answered by the <strong>Sankey diagram</strong> (viz 3).</p>
           </div>
         </div>
-
         <div class="task-card" data-task="5">
           <div class="task-header">
             <span class="task-num">T5</span>
@@ -259,33 +172,21 @@
             <span class="task-toggle">+</span>
           </div>
           <div class="task-body">
-            <p>How did COVID-19 interrupt review activity, and how did the subsequent rebound compare
-               with the steadier movement of official rents? Answered by the
-               <strong>annotated D3 timeline</strong> (viz 6).</p>
+            <p>How did COVID interrupt activity, and how does the rebound compare with rents?
+               Answered by the <strong>annotated D3 timeline</strong> (viz 6).</p>
           </div>
         </div>
-
-      </div><!-- end .task-list -->
-
+      </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       DASHBOARD SECTION
-       Embeds the Tableau Public dashboard.
-       Contains all four linked interactive views (viz 1–4).
-  ============================================================ -->
   <section id="dashboard" class="section section--dark">
     <div class="container">
-
       <h2 class="section-title">Interactive Dashboard</h2>
       <p class="section-intro">
         Four linked views: choropleth map, scatter plot, Sankey diagram, and heatmap.
         Use the filters inside Tableau to explore by year and neighbourhood.
       </p>
-
-      <!-- Responsive wrapper: maintains 16:9 ratio on all screen sizes -->
       <div class="viz-frame">
         <iframe
           src="https://public.tableau.com/views/progvisual/dash?:embed=yes&:showVizHome=no&:toolbar=no"
@@ -293,49 +194,95 @@
           allowfullscreen>
         </iframe>
       </div>
-
-      <!-- Viz legend: describes each of the four linked views -->
       <div class="viz-legend">
-
         <div class="legend-item">
           <span class="legend-dot" style="background:#FF5A5F"></span>
           <span><strong>Viz 1 &mdash; Choropleth map</strong>: Airbnb density per neighbourhood, 2018&ndash;2024 slider</span>
         </div>
-
         <div class="legend-item">
           <span class="legend-dot" style="background:#F4B82D"></span>
           <span><strong>Viz 2 &mdash; Scatter plot</strong>: &Delta;Airbnb vs &Delta;Rent per neighbourhood; bubble size = listing count</span>
         </div>
-
         <div class="legend-item">
           <span class="legend-dot" style="background:#E8B4B8"></span>
           <span><strong>Viz 3 &mdash; Sankey diagram</strong>: Host tier &rarr; license status &rarr; room type flow</span>
         </div>
-
         <div class="legend-item">
           <span class="legend-dot" style="background:#1A5E3F"></span>
           <span><strong>Viz 4 &mdash; Heatmap</strong>: Neighbourhood &times; year intensity; click a cell for detail</span>
         </div>
-
-      </div><!-- end .viz-legend -->
-
+      </div>
     </div>
   </section>
 
 
   <!-- ============================================================
        CREATIVE VISUALISATIONS
-       Viz 5 (Pressure Map) and Viz 6 (D3 Annotated Timeline).
-       Viz 6 is the required original JavaScript component.
   ============================================================ -->
   <section id="creative" class="section section--light">
     <div class="container">
 
       <h2 class="section-title">Creative Visualisations</h2>
 
-      <!-- --- Creative #1: Pressure Map --- -->
+      <!-- ─── Creative #1 — 3D ISOMETRIC MAP ─────────────────── -->
       <div class="creative-block">
-        <div class="creative-label">Creative #1</div>
+        <div class="creative-label">Creative #1 &mdash; JavaScript / Three.js</div>
+        <h3>The Invasion &mdash; 3D Isometric Map of Milan</h3>
+        <p>
+          Each terracotta prism represents a neighbourhood: its <strong>height</strong>
+          encodes the official OMI midpoint rent (&euro;/m&sup2;/month).
+          The <span style="color:#FF5A5F;font-weight:600">coral balloons</span> floating above
+          each building represent Airbnb listings (one balloon per 8 listings).
+          Use the slider to travel through 2018&ndash;2024 and watch the city literally rise.
+          <em>Drag</em> to orbit &nbsp;&bull;&nbsp; <em>scroll</em> to zoom.
+        </p>
+
+        <!-- Three.js canvas container -->
+        <div id="landmark-canvas" style="
+          width: 100%;
+          height: 520px;
+          border-radius: 12px;
+          overflow: hidden;
+          cursor: grab;
+          background: #FAF6F0;
+          margin: 20px 0 14px;
+        "></div>
+
+        <!-- Year slider -->
+        <div style="display:flex; align-items:center; gap:16px; margin-bottom:10px;">
+          <span style="font-size:1.8rem; font-weight:700; color:#8B3A2F; min-width:52px;"
+                id="landmark-year-display">2018</span>
+          <input
+            id="landmark-slider"
+            type="range"
+            min="2018" max="2024" step="1" value="2018"
+            style="flex:1; accent-color:#8B3A2F; cursor:pointer;"
+          />
+          <span style="font-size:0.85rem; opacity:0.5;">2024</span>
+        </div>
+
+        <!-- Legend -->
+        <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:0.8rem; color:#666;">
+          <span>
+            <span style="display:inline-block;width:12px;height:8px;background:#8B3A2F;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>
+            Building height = OMI rent (&euro;/m&sup2;)
+          </span>
+          <span>
+            <span style="display:inline-block;width:10px;height:10px;background:#FF5A5F;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
+            Balloons = Airbnb listings (1 per 8)
+          </span>
+          <span>
+            <span style="display:inline-block;width:10px;height:10px;background:#F4B82D;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
+            Golden cone = Duomo
+          </span>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- ─── Creative #2 — PRESSURE GRID ─────────────────────── -->
+      <div class="creative-block">
+        <div class="creative-label">Creative #2</div>
         <h3>Pressure Grid &mdash; Hexagonal Comparison View</h3>
         <p>
           Each hexagonal cell represents one neighbourhood in a structured comparison grid rather
@@ -346,56 +293,41 @@
         </p>
         <figure class="viz-figure">
           <img src="assets/pressure_grid.png" alt="Hexagonal comparison grid showing Airbnb listing concentration and linked 2024 OMI rent context by Milan neighbourhood" class="viz-image">
-          <figcaption>The design is creative, but the encodings are direct: darker hexagons mean more listings, larger hexagons mean higher linked official rents.</figcaption>
+          <figcaption>Darker hexagons mean more listings, larger hexagons mean higher linked official rents.</figcaption>
         </figure>
       </div>
 
-      <!-- Divider -->
       <hr class="section-divider">
 
-      <!-- --- Creative #2: D3 Annotated Timeline (JavaScript component) --- -->
+      <!-- ─── Creative #3 — D3 ANNOTATED TIMELINE ──────────────── -->
       <div class="creative-block">
-        <div class="creative-label">Creative #2 &mdash; JavaScript component</div>
+        <div class="creative-label">Creative #3 &mdash; D3 component</div>
         <h3>Annotated Timeline &mdash; Airbnb &amp; Rent over Time</h3>
         <p>
           An explanatory view designed for non-expert readers.
           Hover over any data point to see its value.
           Click an annotation marker to read the context (COVID lockdown, CIN regulation, etc.).
         </p>
-
-        <!-- The D3 timeline renders inside this div.
-             main.js (or a dedicated timeline.js) targets this id. -->
         <div id="d3-timeline"></div>
-
-        <!-- Annotation detail panel — populated by main.js when user clicks a marker -->
         <div id="annotation-panel" class="annotation-panel hidden">
           <button id="annotation-close" aria-label="Close">&times;</button>
           <h4 id="annotation-title"></h4>
           <p id="annotation-text"></p>
         </div>
-
-      </div><!-- end creative #2 -->
+      </div>
 
     </div>
   </section>
 
 
-  <!-- ============================================================
-       WHITE HAT / BLACK HAT
-       Two static matplotlib figures with explanatory captions.
-  ============================================================ -->
   <section id="hats" class="section section--dark">
     <div class="container">
-
       <h2 class="section-title">White Hat / Black Hat</h2>
       <p class="section-intro">
         The same dataset, two radically different framings. Both are technically accurate.
         Only one is honest.
       </p>
-
       <div class="hat-grid">
-
-        <!-- White Hat -->
         <div class="hat-card hat-card--white">
           <div class="hat-badge">White Hat</div>
           <h3>Transparent &amp; Constructive View</h3>
@@ -405,12 +337,10 @@
             official rents, but the figure does not imply direct causation.
           </p>
           <figure class="viz-figure">
-            <img src="assets/white_hat.png" alt="White hat chart comparing indexed Airbnb review activity and indexed OMI midpoint rent from 2018 to 2024" class="viz-image">
+            <img src="assets/white_hat.png" alt="White hat chart" class="viz-image">
             <figcaption>The same baseline and the full time window make the comparison readable without overstatement.</figcaption>
           </figure>
         </div>
-
-        <!-- Black Hat -->
         <div class="hat-card hat-card--black">
           <div class="hat-badge hat-badge--black">Black Hat</div>
           <h3>Misleading Framing</h3>
@@ -420,67 +350,46 @@
             but the framing pushes the viewer toward a much stronger conclusion than the data can support.
           </p>
           <figure class="viz-figure">
-            <img src="assets/black_hat.png" alt="Black hat chart using truncated axes and a reduced time window to exaggerate alignment between Airbnb activity and rents" class="viz-image">
+            <img src="assets/black_hat.png" alt="Black hat chart" class="viz-image">
             <figcaption>The misleading effect comes from design choices rather than fabricated values.</figcaption>
           </figure>
         </div>
-
-      </div><!-- end .hat-grid -->
-
+      </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       KEY FINDINGS
-       Bullet-point summary of the main analytical conclusions.
-  ============================================================ -->
   <section id="findings" class="section section--light">
     <div class="container">
-
       <h2 class="section-title">Key Findings</h2>
-
       <ol class="findings-list">
-
         <li>
           <strong>Concentration is real but not citywide uniform:</strong> The five largest
-          neighbourhoods in the current snapshot account for about 28 % of all listings,
-          with Buenos Aires &ndash; Venezia and Duomo standing out most clearly.
+          neighbourhoods account for about 28 % of all listings, with Buenos Aires &ndash; Venezia
+          and Duomo standing out most clearly.
         </li>
-
         <li>
-          <strong>Current Airbnb presence aligns with expensive rent contexts:</strong> Across
-          neighbourhoods, the correlation between listing stock and linked 2024 OMI midpoint rent
-          is positive (r &asymp; 0.62). This is a cross-sectional association, not causal proof.
+          <strong>Current Airbnb presence aligns with expensive rent contexts:</strong> The
+          correlation between listing stock and linked 2024 OMI midpoint rent is positive
+          (r &asymp; 0.62). This is a cross-sectional association, not causal proof.
         </li>
-
         <li>
           <strong>COVID was a sharp interruption, not a reset:</strong> Review activity fell
           by about 67.5 % from 2019 to 2020, then rebounded strongly. By 2024 the yearly review
           count was roughly 329 % above the 2019 level.
         </li>
-
         <li>
           <strong>The stock is heavily commercialized:</strong> Entire homes represent about
-          87.9 % of the current snapshot, and hosts with at least five listings account for
-          about 45.1 % of all listings.
+          87.9 % of the snapshot, and hosts with at least five listings account for about 45.1 %.
         </li>
-
         <li>
           <strong>Pressure does not automatically imply displacement:</strong> The data show
           a meaningful overlap between Airbnb concentration and high rent context, but not direct
-          evidence of resident displacement. That would require eviction, contract, or registry data.
+          evidence of displacement. That would require eviction or registry data.
         </li>
-
       </ol>
-
     </div>
   </section>
 
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
   <footer id="footer">
     <div class="container footer-inner">
       <p>
@@ -488,21 +397,38 @@
         Data: Inside Airbnb, Agenzia delle Entrate (OMI)
       </p>
       <p class="footer-small">
-        Analysis performed for educational purposes only.
-        All data is publicly available.
+        Analysis performed for educational purposes only. All data is publicly available.
       </p>
     </div>
   </footer>
 
-
   <!-- ============================================================
-       JAVASCRIPT
-       Loaded at the bottom so the HTML is parsed first.
-       main.js handles: navbar highlight, counter animation,
-       task card accordion, and the D3 timeline.
+       SCRIPTS — ordine obbligatorio:
+       1. D3       (usato da main.js e landmark.js)
+       2. Three.js (usato da landmark.js)
+       3. TWEEN.js (usato da landmark.js)
+       4. main.js  (navbar, counters, accordion, D3 timeline)
+       5. landmark.js (mappa 3D)
+       6. inline slider wiring
   ============================================================ -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
   <script src="main.js"></script>
+  <script src="landmark.js"></script>
+  <script src="receipt.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var slider  = document.getElementById('landmark-slider');
+      var display = document.getElementById('landmark-year-display');
+      if (!slider) return;
+      slider.addEventListener('input', function () {
+        var year = parseInt(slider.value, 10);
+        display.textContent = year;
+        if (window.LandmarkMap) window.LandmarkMap.setYear(year);
+      });
+    });
+  </script>
 
 </body>
 </html>
