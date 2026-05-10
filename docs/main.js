@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   initNavbar();
   initTaskAccordion();
+  initScrollReveal();
 
   fetch('assets/metrics.json')
     .then(function (response) { return response.json(); })
@@ -353,6 +354,22 @@ function initD3Timeline(timelineMetrics) {
       crosshair.style('opacity', 0);
       tooltip.style('opacity', 0);
     });
+}
+
+
+function initScrollReveal() {
+  var revealEls = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(function (el) {
+    observer.observe(el);
+  });
 }
 
 

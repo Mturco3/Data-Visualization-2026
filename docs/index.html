@@ -19,7 +19,7 @@
         <li><a href="#data">Data</a></li>
         <li><a href="#tasks">Tasks</a></li>
         <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#creative">Creative</a></li>
+        <li><a href="#invasion">The Invasion</a></li>
         <li><a href="#hats">White / Black Hat</a></li>
         <li><a href="#findings">Findings</a></li>
       </ul>
@@ -53,7 +53,7 @@
   </header>
 
   <section id="intro" class="section section--light">
-    <div class="container">
+    <div class="container reveal">
       <h2 class="section-title">Introduction</h2>
       <span class="tag">Urban planners &amp; citizens</span>
       <p>
@@ -84,7 +84,7 @@
   </section>
 
   <section id="data" class="section section--dark">
-    <div class="container">
+    <div class="container reveal">
       <h2 class="section-title">Data Sources</h2>
       <div class="dataset-grid">
         <div class="dataset-card">
@@ -117,7 +117,7 @@
   </section>
 
   <section id="tasks" class="section section--light">
-    <div class="container">
+    <div class="container reveal">
       <h2 class="section-title">Analytical Tasks</h2>
       <p class="section-intro">Click any task card to expand the design rationale.</p>
       <div class="task-list">
@@ -181,18 +181,42 @@
   </section>
 
   <section id="dashboard" class="section section--dark">
-    <div class="container">
+    <div class="container reveal">
       <h2 class="section-title">Interactive Dashboard</h2>
       <p class="section-intro">
         Four linked views: choropleth map, scatter plot, Sankey diagram, and heatmap.
         Use the filters inside Tableau to explore by year and neighbourhood.
       </p>
-      <div class="viz-frame">
-        <iframe
-          src="https://public.tableau.com/views/progvisual/dash?:embed=yes&:showVizHome=no&:toolbar=no"
-          title="Milan Airbnb & Rent Dashboard"
-          allowfullscreen>
-        </iframe>
+      <div class="tableau-wrapper">
+        <div class='tableauPlaceholder' id='viz1746877225428' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Mi/Milan_Housing_Dynamics/Dashboard1/1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='name' value='Milan_Housing_Dynamics/Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='it-IT' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1746877225428');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '100%';
+          vizElement.style.height = '400px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
       </div>
       <div class="viz-legend">
         <div class="legend-item">
@@ -217,118 +241,75 @@
 
 
   <!-- ============================================================
-       CREATIVE VISUALISATIONS
+       THE INVASION — 3D Isometric Map (own section)
   ============================================================ -->
-  <section id="creative" class="section section--light">
-    <div class="container">
+  <section id="invasion" class="section section--light">
+    <div class="container reveal">
+      <h2 class="section-title">The Invasion &mdash; 3D Isometric Map of Milan</h2>
+      <span class="tag">JavaScript / Three.js</span>
+      <p>
+        Each terracotta prism represents a neighbourhood: its <strong>height</strong>
+        encodes the official OMI midpoint rent (&euro;/m&sup2;/month).
+        The <span style="color:#FF5A5F;font-weight:600">coral balloons</span> floating above
+        each building represent Airbnb listings (one balloon per 8 listings).
+        Use the slider to travel through 2018&ndash;2024 and watch the city literally rise.
+        <em>Drag</em> to orbit &nbsp;&bull;&nbsp; <em>scroll</em> to zoom.
+      </p>
 
-      <h2 class="section-title">Creative Visualisations</h2>
+      <!-- Three.js canvas container -->
+      <div id="landmark-canvas" style="
+        width: 100%;
+        height: 520px;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: grab;
+        background: #FAF6F0;
+        margin: 20px 0 14px;
+      "></div>
 
-      <!-- ─── Creative #1 — 3D ISOMETRIC MAP ─────────────────── -->
-      <div class="creative-block">
-        <div class="creative-label">Creative #1 &mdash; JavaScript / Three.js</div>
-        <h3>The Invasion &mdash; 3D Isometric Map of Milan</h3>
-        <p>
-          Each terracotta prism represents a neighbourhood: its <strong>height</strong>
-          encodes the official OMI midpoint rent (&euro;/m&sup2;/month).
-          The <span style="color:#FF5A5F;font-weight:600">coral balloons</span> floating above
-          each building represent Airbnb listings (one balloon per 8 listings).
-          Use the slider to travel through 2018&ndash;2024 and watch the city literally rise.
-          <em>Drag</em> to orbit &nbsp;&bull;&nbsp; <em>scroll</em> to zoom.
-        </p>
-
-        <!-- Three.js canvas container -->
-        <div id="landmark-canvas" style="
-          width: 100%;
-          height: 520px;
-          border-radius: 12px;
-          overflow: hidden;
-          cursor: grab;
-          background: #FAF6F0;
-          margin: 20px 0 14px;
-        "></div>
-
-        <!-- Year slider -->
-        <div style="display:flex; align-items:center; gap:16px; margin-bottom:10px;">
-          <span style="font-size:1.8rem; font-weight:700; color:#8B3A2F; min-width:52px;"
-                id="landmark-year-display">2018</span>
-          <input
-            id="landmark-slider"
-            type="range"
-            min="2018" max="2024" step="1" value="2018"
-            style="flex:1; accent-color:#8B3A2F; cursor:pointer;"
-          />
-          <span style="font-size:0.85rem; opacity:0.5;">2024</span>
-        </div>
-
-        <!-- Legend -->
-        <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:0.8rem; color:#666;">
-          <span>
-            <span style="display:inline-block;width:12px;height:8px;background:#8B3A2F;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>
-            Building height = OMI rent (&euro;/m&sup2;)
-          </span>
-          <span>
-            <span style="display:inline-block;width:10px;height:10px;background:#FF5A5F;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
-            Balloons = Airbnb listings (1 per 8)
-          </span>
-          <span>
-            <span style="display:inline-block;width:10px;height:10px;background:#F4B82D;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
-            Golden cone = Duomo
-          </span>
-        </div>
+      <!-- Year slider -->
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:10px;">
+        <span style="font-size:1.8rem; font-weight:700; color:#8B3A2F; min-width:52px;"
+              id="landmark-year-display">2018</span>
+        <input
+          id="landmark-slider"
+          type="range"
+          min="2018" max="2024" step="1" value="2018"
+          style="flex:1; accent-color:#8B3A2F; cursor:pointer;"
+        />
+        <span style="font-size:0.85rem; opacity:0.5;">2024</span>
       </div>
 
-      <hr class="section-divider">
-
-      <!-- ─── Creative #2 — PRESSURE GRID ─────────────────────── -->
-      <div class="creative-block">
-        <div class="creative-label">Creative #2</div>
-        <h3>Pressure Grid &mdash; Hexagonal Comparison View</h3>
-        <p>
-          Each hexagonal cell represents one neighbourhood in a structured comparison grid rather
-          than a literal geographic map. <strong>Colour</strong> encodes the number of listings in
-          the current Airbnb snapshot, while <strong>cell size</strong> encodes the linked 2024 OMI
-          midpoint rent. Neighbourhoods that are both large and dark stand out because they combine
-          dense short-term rental presence with an expensive formal rent context.
-        </p>
-        <figure class="viz-figure">
-          <img src="assets/pressure_grid.png" alt="Hexagonal comparison grid showing Airbnb listing concentration and linked 2024 OMI rent context by Milan neighbourhood" class="viz-image">
-          <figcaption>Darker hexagons mean more listings, larger hexagons mean higher linked official rents.</figcaption>
-        </figure>
+      <!-- Legend -->
+      <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:0.8rem; color:#666;">
+        <span>
+          <span style="display:inline-block;width:12px;height:8px;background:#8B3A2F;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>
+          Building height = OMI rent (&euro;/m&sup2;)
+        </span>
+        <span>
+          <span style="display:inline-block;width:10px;height:10px;background:#FF5A5F;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
+          Balloons = Airbnb listings (1 per 8)
+        </span>
+        <span>
+          <span style="display:inline-block;width:10px;height:10px;background:#F4B82D;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
+          Golden cone = Duomo
+        </span>
       </div>
-
-      <hr class="section-divider">
-
-      <!-- ─── Creative #3 — D3 ANNOTATED TIMELINE ──────────────── -->
-      <div class="creative-block">
-        <div class="creative-label">Creative #3 &mdash; D3 component</div>
-        <h3>Annotated Timeline &mdash; Airbnb &amp; Rent over Time</h3>
-        <p>
-          An explanatory view designed for non-expert readers.
-          Hover over any data point to see its value.
-          Click an annotation marker to read the context (COVID lockdown, CIN regulation, etc.).
-        </p>
-        <div id="d3-timeline"></div>
-        <div id="annotation-panel" class="annotation-panel hidden">
-          <button id="annotation-close" aria-label="Close">&times;</button>
-          <h4 id="annotation-title"></h4>
-          <p id="annotation-text"></p>
-        </div>
-      </div>
-
     </div>
   </section>
 
 
-  <section id="hats" class="section section--dark">
-    <div class="container">
-      <h2 class="section-title">White Hat / Black Hat</h2>
-      <p class="section-intro">
+  <section id="hats" class="section">
+    <div class="hats-header">
+      <h2>White Hat / Black Hat</h2>
+      <p>
         The same dataset, two radically different framings. Both are technically accurate.
         Only one is honest.
       </p>
-      <div class="hat-grid">
-        <div class="hat-card hat-card--white">
+    </div>
+    <div class="hat-columns reveal">
+      <div class="hat-col hat-col--white">
+        <div class="hat-col-inner">
           <div class="hat-badge">White Hat</div>
           <h3>Transparent &amp; Constructive View</h3>
           <p>
@@ -341,7 +322,9 @@
             <figcaption>The same baseline and the full time window make the comparison readable without overstatement.</figcaption>
           </figure>
         </div>
-        <div class="hat-card hat-card--black">
+      </div>
+      <div class="hat-col hat-col--black">
+        <div class="hat-col-inner">
           <div class="hat-badge hat-badge--black">Black Hat</div>
           <h3>Misleading Framing</h3>
           <p>
@@ -359,7 +342,7 @@
   </section>
 
   <section id="findings" class="section section--light">
-    <div class="container">
+    <div class="container reveal">
       <h2 class="section-title">Key Findings</h2>
       <ol class="findings-list">
         <li>
@@ -404,12 +387,13 @@
 
   <!-- ============================================================
        SCRIPTS — ordine obbligatorio:
-       1. D3       (usato da main.js e landmark.js)
+       1. D3       (usato da main.js)
        2. Three.js (usato da landmark.js)
        3. TWEEN.js (usato da landmark.js)
-       4. main.js  (navbar, counters, accordion, D3 timeline)
+       4. main.js  (navbar, counters, accordion, scroll reveal)
        5. landmark.js (mappa 3D)
-       6. inline slider wiring
+       6. receipt.js
+       7. inline slider wiring
   ============================================================ -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

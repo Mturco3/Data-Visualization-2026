@@ -157,10 +157,13 @@ blockquote.central-question {
   transition: background var(--transition), box-shadow var(--transition);
 }
 
-/* Once JS adds "scrolled", the bar gets a solid background */
+/* Once JS adds "scrolled", the bar gets a glassmorphism background */
 #navbar.scrolled {
-  background: var(--bg-dark);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  background: rgba(26,26,26,0.68);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-inner {
@@ -315,7 +318,14 @@ blockquote.central-question {
   border-radius: var(--radius-md);
   padding: var(--space-sm) var(--space-md);
   min-width: 160px;
-  backdrop-filter: blur(4px);  /* Frosted glass effect */
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.stat-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+  transform: translateY(-4px);
 }
 
 .stat-number {
@@ -464,6 +474,13 @@ blockquote.central-question {
   border-radius: var(--radius-lg);
   padding: var(--space-md);
   border: 1px solid var(--border-dark);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.dataset-card:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+  transform: translateY(-4px);
 }
 
 .dataset-icon {
@@ -524,13 +541,15 @@ blockquote.central-question {
 .task-card {
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  overflow: hidden;         /* Hides the body when collapsed */
+  overflow: hidden;
   background: var(--white);
-  transition: box-shadow var(--transition);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .task-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+  transform: translateY(-4px);
 }
 
 /* The clickable header row */
@@ -674,6 +693,30 @@ blockquote.central-question {
 
 
 /* -----------------------------------------------------------------
+  TABLEAU WRAPPER
+----------------------------------------------------------------- */
+.tableau-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 420px;
+  border-radius: 16px;
+  background: #2a2a2a;
+  margin-bottom: 2rem;
+}
+
+.tableau-wrapper .tableauPlaceholder {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.tableau-wrapper object.tableauViz {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+/* -----------------------------------------------------------------
   12. VIZ LEGEND
    Describes the four Tableau views below the dashboard.
 ----------------------------------------------------------------- */
@@ -805,28 +848,86 @@ blockquote.central-question {
 
 
 /* -----------------------------------------------------------------
-  15. WHITE / BLACK HAT GRID
+  15. WHITE / BLACK HAT
 ----------------------------------------------------------------- */
-.hat-grid {
+.hats-header {
+  background: #FF5A5F;
+  color: var(--white);
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.hats-header h2 {
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.hats-header p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hat-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
 }
 
-.hat-card {
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  border: 1px solid;
+.hat-col {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hat-card--white {
-  background: var(--bg-mid);
-  border-color: var(--verde);
+.hat-col--white {
+  background: #ffffff;
+  color: var(--text-main);
 }
 
-.hat-card--black {
-  background: #111;
-  border-color: var(--tetti);
+.hat-col--black {
+  background: #000000;
+  color: var(--white);
+}
+
+.hat-col-inner {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.hat-col-inner h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.hat-col--white .hat-col-inner h3 {
+  color: var(--text-main);
+}
+
+.hat-col--black .hat-col-inner h3 {
+  color: var(--white);
+}
+
+.hat-col-inner p {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.hat-col--white .hat-col-inner p {
+  color: var(--text-muted);
+}
+
+.hat-col--black .hat-col-inner p {
+  color: rgba(255,255,255,0.7);
+}
+
+.hat-col--black .viz-image {
+  border-color: var(--border-dark);
+}
+
+.hat-col--black figcaption {
+  color: rgba(255,255,255,0.6);
 }
 
 /* Badge label above the title */
@@ -845,16 +946,6 @@ blockquote.central-question {
 
 .hat-badge--black {
   background: var(--tetti);
-}
-
-.hat-card h3 {
-  color: var(--text-light);
-  margin-bottom: var(--space-xs);
-}
-
-.hat-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
 }
 
 
@@ -934,6 +1025,21 @@ blockquote.central-question {
 
 
 /* -----------------------------------------------------------------
+  20. SCROLL REVEAL
+----------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* -----------------------------------------------------------------
   19. RESPONSIVE — MOBILE BREAKPOINT
    Below 700px, stack two-column grids into single columns.
 ----------------------------------------------------------------- */
@@ -944,8 +1050,8 @@ blockquote.central-question {
     grid-template-columns: 1fr;
   }
 
-  /* Stack white/black hat cards */
-  .hat-grid {
+  /* Stack white/black hat columns */
+  .hat-columns {
     grid-template-columns: 1fr;
   }
 
