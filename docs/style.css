@@ -184,6 +184,11 @@ blockquote.central-question {
   color: var(--rausch);
   font-size: 1.1rem;
   letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  color: var(--rausch);
 }
 
 .nav-links {
@@ -999,11 +1004,13 @@ blockquote.central-question {
   margin: var(--space-md) 0 0;
   padding: 0;
   line-height: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .tableau-stage {
   position: relative;
-  width: 100%;
+  width: min(1500px, 100%);
   overflow: hidden;
   display: flex;
   justify-content: center;
