@@ -17,7 +17,7 @@
       <ul class="nav-links">
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#data">Data</a></li>
-        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#pressure">Pressure</a></li>
         <li><a href="#dashboard">Dashboard</a></li>
         <li><a href="#invasion">The Invasion</a></li>
         <li><a href="#hats">White / Black Hat</a></li>
@@ -34,20 +34,6 @@
         Exploring the spatial and temporal correlation between short-term rentals
         and long-term rent prices in Milan (2018&ndash;2024)
       </p>
-      <div class="stat-cards">
-        <div class="stat-card">
-          <span class="stat-number" data-target="22948">0</span>
-          <span class="stat-label">Listings in the current snapshot</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="87">0</span>
-          <span class="stat-label">Neighbourhoods analysed</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number" data-target="7">0</span>
-          <span class="stat-label">Overlapping years (2018&ndash;2024)</span>
-        </div>
-      </div>
       <a href="#intro" class="scroll-cue" aria-label="Scroll down">&#8595;</a>
     </div>
   </header>
@@ -82,7 +68,7 @@
     </div>
   </section>
 
-  <section id="data" class="section section--dark">
+  <section id="data" class="section section--light section--data">
     <div class="container reveal">
       <h2 class="section-title">Data Sources</h2>
       <div class="dataset-grid">
@@ -91,8 +77,9 @@
           <h3>Inside Airbnb &mdash; Milan</h3>
           <ul>
             <li><strong>What:</strong> Listing-level snapshot from Inside Airbnb (2025), with the embedded review history used as a temporal proxy to reconstruct activity from 2018 to 2024.</li>
+            <li><strong>Reviews dataset:</strong> Review-level records from Inside Airbnb, especially listing_id and review date, are used to estimate yearly Airbnb activity when full historical availability is not available.</li>
             <li><strong>Granularity:</strong> Individual listing → aggregated by neighbourhood and OMI zone.</li>
-            <li><strong>Key fields:</strong> host_id, room_type, price, reviews_per_month, calculated_host_listings_count, license (CIN).</li>
+            <li><strong>Key fields:</strong> host_id, room_type, price, reviews_per_month, calculated_host_listings_count, license (CIN), listing_id, review date.</li>
             <li><strong>Limitations:</strong> Scraped data; availability calendars are unreliable; no direct revenue figures; the review-based activity proxy underestimates listings with few reviews.</li>
           </ul>
         </div>
@@ -114,124 +101,122 @@
     </div>
   </section>
 
-  <section id="tasks" class="section section--light">
-    <div class="container reveal">
-      <h2 class="section-title">Analytical Tasks</h2>
-      <p class="section-intro">Click any task card to expand the design rationale.</p>
-      <div class="task-list">
-        <div class="task-card" data-task="1">
-          <div class="task-header">
-            <span class="task-num">T1</span>
-            <h3>Spatial Density</h3>
-            <span class="task-toggle">+</span>
-          </div>
-          <div class="task-body">
-            <p>Where is the current Airbnb stock concentrated? Answered by the
-               <strong>choropleth map</strong> (viz 1) and the <strong>heatmap</strong> (viz 4).</p>
-          </div>
-        </div>
-        <div class="task-card" data-task="2">
-          <div class="task-header">
-            <span class="task-num">T2</span>
-            <h3>Price Correlation</h3>
-            <span class="task-toggle">+</span>
-          </div>
-          <div class="task-body">
-            <p>Do neighbourhoods with more listings sit in a more expensive rent context?
-               Answered by the <strong>scatter plot</strong> (viz 2).</p>
-          </div>
-        </div>
-        <div class="task-card" data-task="3">
-          <div class="task-header">
-            <span class="task-num">T3</span>
-            <h3>Saturation Hotspots</h3>
-            <span class="task-toggle">+</span>
-          </div>
-          <div class="task-body">
-            <p>Which neighbourhoods combine dense Airbnb stock with high rents?
-               Answered by the <strong>pressure grid</strong> (viz 5).</p>
-          </div>
-        </div>
-        <div class="task-card" data-task="4">
-          <div class="task-header">
-            <span class="task-num">T4</span>
-            <h3>Host Professionalization</h3>
-            <span class="task-toggle">+</span>
-          </div>
-          <div class="task-body">
-            <p>How commercialized is the current stock?
-               Answered by the <strong>Sankey diagram</strong> (viz 3).</p>
-          </div>
-        </div>
-        <div class="task-card" data-task="5">
-          <div class="task-header">
-            <span class="task-num">T5</span>
-            <h3>Temporal Trajectory &amp; COVID</h3>
-            <span class="task-toggle">+</span>
-          </div>
-          <div class="task-body">
-            <p>How did COVID interrupt activity, and how does the rebound compare with rents?
-               Answered by the <strong>annotated D3 timeline</strong> (viz 6).</p>
-          </div>
-        </div>
+  <section id="pressure" class="section section--light section--pressure">
+    <div class="container container--wide reveal">
+      <div class="pressure-heading">
+        <p class="dashboard-kicker">Before the dashboard</p>
+        <h2 class="section-title">Airbnb Pressure And Short-Term Rentals</h2>
+        <p class="section-intro">
+          In Italian public debate the issue is often called <em>affitti brevi</em>,
+          or short-term rentals: homes that function less like ordinary housing and more like
+          flexible tourist accommodation. The dashboard starts from that debate, but the first
+          question is simpler: is platform activity actually rising, and do listing rules look
+          compatible with very short stays?
+        </p>
+      </div>
+
+      <div class="pressure-question">
+        <span>What does the data say?</span>
+        <p>
+          Reviews give the clearest temporal signal: after the COVID interruption, activity rises
+          very fast. Minimum-stay rules add the operational clue: most listings allow stays under
+          one week, which is exactly the rental logic residents and policymakers worry about.
+        </p>
+      </div>
+
+      <div class="pressure-grid">
+        <figure class="pressure-figure">
+          <img src="assets/eda_reviews_over_time.png" alt="Airbnb review activity in Milan from 2018 to 2024" loading="lazy">
+          <figcaption>
+            Review volume is not perfect demand, but it is the strongest time signal in the data.
+            It shows the market recovering quickly after 2020 and reaching a much higher level by 2024.
+          </figcaption>
+        </figure>
+        <figure class="pressure-figure">
+          <img src="assets/minimum_nights_distribution.png" alt="Distribution of minimum-stay rules for Milan Airbnb listings" loading="lazy">
+          <figcaption>
+            Minimum-night rules show how the current stock is configured. Listings that accept one
+            to six nights are structurally ready for short-term rental use.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section id="dashboard" class="section section--dark">
-    <div class="container reveal">
-      <h2 class="section-title">Interactive Dashboard</h2>
-      <p class="section-intro">
-        Four linked views: choropleth map, scatter plot, Sankey diagram, and heatmap.
-        Use the filters inside Tableau to explore by year and neighbourhood.
-      </p>
-      <div class="tableau-wrapper">
-        <div class='tableauPlaceholder' id='viz1746877225428' style='position: relative'>
-          <noscript>
-            <a href='#'>
-              <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Mi/Milan_Housing_Dynamics/Dashboard1/1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='name' value='Milan_Housing_Dynamics/Dashboard1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='it-IT' />
-          </object>
+  <section id="dashboard" class="section section--light">
+    <div class="container container--dashboard reveal">
+      <div class="dashboard-shell">
+        <h2 class="section-title">Interactive Dashboard</h2>
+        <p class="dashboard-kicker">Citywide overview, zone selection, and market context in one frame</p>
+        <p class="section-intro">
+          The dashboard reads Milan from the top down: first the citywide Airbnb and rent-market
+          indicators, then the neighbourhood map, then the yearly review and OMI rent trajectories.
+          The final panels compare residential typologies and test whether higher Airbnb prices
+          tend to sit in higher-rent zones.
+        </p>
+        <div class="tableau-wrapper">
+          <div class="tableau-stage" id="tableau-stage">
+            <div class='tableauPlaceholder' id='viz1746877225428' style='position: relative'>
+              <noscript>
+                <a href='#'>
+                  <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Mi/Milan_Housing_Dynamics/Dashboard1/1_rss.png' style='border: none' />
+                </a>
+              </noscript>
+              <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='name' value='Milan_Housing_Dynamics/Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='no' />
+                <param name='showVizHome' value='no' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='it-IT' />
+              </object>
+            </div>
+          </div>
+          <script type='text/javascript'>
+            var stageElement = document.getElementById('tableau-stage');
+            var divElement = document.getElementById('viz1746877225428');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            function sizeTableauViz() {
+              var dashboardWidth = 1500;
+              var dashboardHeight = 1120;
+              var availableWidth = stageElement.clientWidth;
+              var scale = Math.min(1, availableWidth / dashboardWidth);
+
+              stageElement.style.height = (dashboardHeight * scale) + 'px';
+              divElement.style.width = dashboardWidth + 'px';
+              divElement.style.height = dashboardHeight + 'px';
+              divElement.style.transform = 'scale(' + scale + ')';
+              divElement.style.transformOrigin = 'top center';
+              vizElement.style.width = dashboardWidth + 'px';
+              vizElement.style.height = dashboardHeight + 'px';
+              vizElement.style.transform = 'none';
+            }
+            sizeTableauViz();
+            window.addEventListener('resize', sizeTableauViz);
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
         </div>
-        <script type='text/javascript'>
-          var divElement = document.getElementById('viz1746877225428');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width = '100%';
-          vizElement.style.height = '400px';
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div>
-      <div class="viz-legend">
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#FF5A5F"></span>
-          <span><strong>Viz 1 &mdash; Choropleth map</strong>: Airbnb density per neighbourhood, 2018&ndash;2024 slider</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#F4B82D"></span>
-          <span><strong>Viz 2 &mdash; Scatter plot</strong>: &Delta;Airbnb vs &Delta;Rent per neighbourhood; bubble size = listing count</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#E8B4B8"></span>
-          <span><strong>Viz 3 &mdash; Sankey diagram</strong>: Host tier &rarr; license status &rarr; room type flow</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#1A5E3F"></span>
-          <span><strong>Viz 4 &mdash; Heatmap</strong>: Neighbourhood &times; year intensity; click a cell for detail</span>
+        <div class="dashboard-comments">
+          <article class="dashboard-comment">
+            <h3>Read The Map First</h3>
+            <p>Start with the Milan map: selecting a zone turns the dashboard from a citywide overview into a local comparison of listings, reviews, hosts, Airbnb prices, and OMI rent levels.</p>
+          </article>
+          <article class="dashboard-comment">
+            <h3>Separate Tempo From Level</h3>
+            <p>Reviews move like a platform signal, with a COVID break and a fast rebound. OMI rents move more slowly, so the dashboard keeps growth rates and rent levels visually distinct.</p>
+          </article>
+          <article class="dashboard-comment">
+            <h3>Use Correlation Carefully</h3>
+            <p>The scatter view suggests alignment between expensive Airbnb offers and expensive rent environments, but the spread across zones is the point: pressure is spatially uneven.</p>
+          </article>
         </div>
       </div>
     </div>
@@ -246,47 +231,48 @@
       <h2 class="section-title">The Invasion &mdash; 3D Isometric Map of Milan</h2>
       <span class="tag">JavaScript / Three.js</span>
       <p>
-        Each terracotta prism represents a neighbourhood: its <strong>height</strong>
+        Each terracotta palace represents a neighbourhood: its <strong>height</strong>
         encodes the official OMI midpoint rent (&euro;/m&sup2;/month).
         The <span style="color:#FF5A5F;font-weight:600">coral balloons</span> floating above
-        each building represent Airbnb listings (one balloon per 8 listings).
-        Use the slider to travel through 2018&ndash;2024 and watch the city literally rise.
-        <em>Drag</em> to orbit &nbsp;&bull;&nbsp; <em>scroll</em> to zoom.
+        each palace represent yearly Airbnb review volume. The exact visual rule is
+        <strong>height = max(rent_mid &times; 0.55, 0.06)</strong> and
+        <strong>balloons = min(ceil(review_count / 80), 12)</strong>.
+        Select a year from 2018&ndash;2024 and watch the city rise.
+        <em>Scroll</em> to zoom.
       </p>
 
-      <!-- Three.js canvas container -->
       <div id="landmark-canvas" style="
         width: 100%;
         height: 520px;
         border-radius: 12px;
         overflow: hidden;
-        cursor: grab;
+        cursor: zoom-in;
         background: #FAF6F0;
         margin: 20px 0 14px;
       "></div>
 
-      <!-- Year slider -->
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:10px;">
-        <span style="font-size:1.8rem; font-weight:700; color:#8B3A2F; min-width:52px;"
-              id="landmark-year-display">2018</span>
-        <input
-          id="landmark-slider"
-          type="range"
-          min="2018" max="2024" step="1" value="2018"
-          style="flex:1; accent-color:#8B3A2F; cursor:pointer;"
-        />
-        <span style="font-size:0.85rem; opacity:0.5;">2024</span>
+      <!-- Year selector -->
+      <div class="landmark-year-control" aria-label="Select year for the 3D map">
+        <span id="landmark-year-display">2018</span>
+        <div class="landmark-year-picker" role="group" aria-label="Available years">
+          <button type="button" class="landmark-year-button active" data-year="2018">2018</button>
+          <button type="button" class="landmark-year-button" data-year="2019">2019</button>
+          <button type="button" class="landmark-year-button" data-year="2020">2020</button>
+          <button type="button" class="landmark-year-button" data-year="2021">2021</button>
+          <button type="button" class="landmark-year-button" data-year="2022">2022</button>
+          <button type="button" class="landmark-year-button" data-year="2023">2023</button>
+          <button type="button" class="landmark-year-button" data-year="2024">2024</button>
+        </div>
       </div>
 
-      <!-- Legend -->
       <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:0.8rem; color:#666;">
         <span>
           <span style="display:inline-block;width:12px;height:8px;background:#8B3A2F;border-radius:2px;margin-right:5px;vertical-align:middle;"></span>
-          Building height = OMI rent (&euro;/m&sup2;)
+          Palace height = OMI rent (&euro;/m&sup2;)
         </span>
         <span>
           <span style="display:inline-block;width:10px;height:10px;background:#FF5A5F;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
-          Balloons = Airbnb listings (1 per 8)
+          Balloons = review count (1 per 80, max 12)
         </span>
         <span>
           <span style="display:inline-block;width:10px;height:10px;background:#F4B82D;border-radius:50%;margin-right:5px;vertical-align:middle;"></span>
@@ -385,32 +371,18 @@
 
   <!-- ============================================================
        SCRIPTS — ordine obbligatorio:
-       1. D3       (usato da main.js)
-       2. Three.js (usato da landmark.js)
-       3. TWEEN.js (usato da landmark.js)
-       4. main.js  (navbar, counters, accordion, scroll reveal)
-       5. landmark.js (mappa 3D)
-       6. receipt.js
-       7. inline slider wiring
+       1. D3       (used by main.js and landmark.js)
+       2. receipt.js (adds receipt section before navigation is initialized)
+       3. main.js  (navbar, counters, scroll reveal)
+       4. landmark.js (3D map)
   ============================================================ -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+  <script src="milan_data.js"></script>
+  <script src="receipt.js"></script>
   <script src="main.js"></script>
   <script src="landmark.js"></script>
-  <script src="receipt.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var slider  = document.getElementById('landmark-slider');
-      var display = document.getElementById('landmark-year-display');
-      if (!slider) return;
-      slider.addEventListener('input', function () {
-        var year = parseInt(slider.value, 10);
-        display.textContent = year;
-        if (window.LandmarkMap) window.LandmarkMap.setYear(year);
-      });
-    });
-  </script>
 
 </body>
 </html>

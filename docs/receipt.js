@@ -20,9 +20,9 @@
     { text: '  Avg. rent (Duomo)...... 30.27 \u20ac/m\u00b2', cls: 'r-line' },
     { text: '  Avg. rent (periphery)..  6.50 \u20ac/m\u00b2', cls: 'r-line' },
     { text: '', cls: 'r-gap' },
-    { text: 'SHORT-TERM RENTALS              ', cls: 'r-section' },
-    { text: '  Active listings (city)......  36', cls: 'r-line' },
-    { text: '  Reviews (city)......... 40,507', cls: 'r-line' },
+    { text: 'AIRBNB REVIEW SIGNAL           ', cls: 'r-section' },
+    { text: '  Reviewed listings....... 1,780', cls: 'r-line' },
+    { text: '  Reviews (mapped city).. 37,382', cls: 'r-line' },
     { text: '  Nightly price (Brera)...... 89\u20ac', cls: 'r-line' },
     { text: '  Entire homes............... 87%', cls: 'r-line' },
     { text: '', cls: 'r-gap' },
@@ -34,10 +34,10 @@
     { text: '', cls: 'r-gap' },
     { text: '   !! COVID-19 SURCHARGE !!     ', cls: 'r-alert' },
     { text: '', cls: 'r-gap' },
-    { text: 'SHORT-TERM RENTALS              ', cls: 'r-section' },
-    { text: '  Listings collapsed....... -67%', cls: 'r-down' },
-    { text: '  Reviews dropped to.... 18,486 ', cls: 'r-down' },
-    { text: '  Platforms held prices up +1.9%', cls: 'r-line' },
+    { text: 'AIRBNB REVIEW SIGNAL           ', cls: 'r-section' },
+    { text: '  Reviews vs 2019........ -67.4%', cls: 'r-down' },
+    { text: '  Reviews dropped to.... 17,139 ', cls: 'r-down' },
+    { text: '  Reviewed listings...... 2,209 ', cls: 'r-line' },
     { text: '', cls: 'r-gap' },
     { text: 'HOUSING MARKET                  ', cls: 'r-section' },
     { text: '  Rents kept rising......... +1.9%', cls: 'r-up' },
@@ -53,9 +53,9 @@
     { text: '', cls: 'r-gap' },
     { text: '           [ 2022 ]             ', cls: 'r-year' },
     { text: '', cls: 'r-gap' },
-    { text: 'SHORT-TERM RENTALS              ', cls: 'r-section' },
-    { text: '  Active listings (city)... 385 ', cls: 'r-up' },
-    { text: '  Reviews (city)...... 110,657  ', cls: 'r-up' },
+    { text: 'AIRBNB REVIEW SIGNAL           ', cls: 'r-section' },
+    { text: '  Reviewed listings...... 5,122 ', cls: 'r-up' },
+    { text: '  Reviews (mapped city) 103,245 ', cls: 'r-up' },
     { text: '  Avg. rent (Brera).. 24.57 \u20ac/m\u00b2', cls: 'r-line' },
     { text: '', cls: 'r-gap' },
     { text: 'HOUSING MARKET                  ', cls: 'r-section' },
@@ -73,11 +73,11 @@
     { text: '', cls: 'r-gap' },
     { text: '           [ 2024 ]             ', cls: 'r-year' },
     { text: '', cls: 'r-gap' },
-    { text: 'SHORT-TERM RENTALS              ', cls: 'r-section' },
-    { text: '  Active listings (city).. 2,018', cls: 'r-up' },
-    { text: '  Growth since 2018...... \u21915506%', cls: 'r-up' },
-    { text: '  Reviews (city)...... 244,309  ', cls: 'r-up' },
-    { text: '  Growth since 2018....  \u2191503%   ', cls: 'r-up' },
+    { text: 'AIRBNB REVIEW SIGNAL           ', cls: 'r-section' },
+    { text: '  Reviewed listings..... 11,508 ', cls: 'r-up' },
+    { text: '  Growth since 2018..... \u2191546%   ', cls: 'r-up' },
+    { text: '  Reviews (mapped city) 228,182 ', cls: 'r-up' },
+    { text: '  Growth since 2018..... \u2191510%   ', cls: 'r-up' },
     { text: '  Avg. rent (Brera).. 29.59 \u20ac/m\u00b2', cls: 'r-up' },
     { text: '  Growth since 2018......  \u219120%  ', cls: 'r-up' },
     { text: '  Avg. rent (Duomo).. 33.73 \u20ac/m\u00b2', cls: 'r-up' },
@@ -88,7 +88,7 @@
     { text: '  Wage growth since 2018...  ~10%', cls: 'r-line' },
     { text: '', cls: 'r-gap' },
     { text: 'SATURATION                      ', cls: 'r-section' },
-    { text: '  Listings per 1k residents. 1.5', cls: 'r-line' },
+    { text: '  Review pressure is concentrated', cls: 'r-line' },
     { text: '  Neighbourhoods under pressure  ', cls: 'r-line' },
     { text: '    by 2024.................. 12 ', cls: 'r-line' },
     { text: '  Residents near centre...... \u2193  ', cls: 'r-up' },
@@ -127,7 +127,7 @@
   function injectStyles() {
     var css = `
       #receipt {
-        background: #111;
+        background: linear-gradient(180deg, #fffdf9 0%, #f7f1e8 100%);
         padding: 60px 0 80px;
       }
       #receipt > .container {
@@ -144,12 +144,12 @@
         flex: 0 0 210px;
         position: sticky;
         top: 80px;
-        color: #D4C4A8;
+        color: #4f4841;
       }
       .receipt-explainer h2 {
         font-family: 'Playfair Display', Georgia, serif;
         font-size: 1.9rem;
-        color: #E8B4B8;
+        color: #8B3A2F;
         line-height: 1.2;
         margin-bottom: 16px;
       }
@@ -169,17 +169,17 @@
         font-weight: bold;
         padding: 6px 14px;
         border-radius: 4px;
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(255,90,95,0.08);
+        border: 1px solid rgba(255,90,95,0.22);
         transition: color 0.4s, border-color 0.4s;
-        color: #D4C4A8;
+        color: #8B3A2F;
       }
       .receipt-hint {
         margin-top: 14px;
         font-family: 'Courier New', monospace;
         font-size: 0.72rem;
-        color: #E8B4B8;
-        opacity: 0.5;
+        color: #C0392B;
+        opacity: 0.72;
         line-height: 1.6;
       }
 
@@ -192,13 +192,14 @@
       }
       .receipt-paper {
         background: #fff;
-        box-shadow: 6px 8px 32px rgba(0,0,0,0.5), -2px 0 12px rgba(0,0,0,0.2);
+        box-shadow: 0 18px 44px rgba(139,58,47,0.16);
         position: relative;
       }
       .receipt-inner {
         padding: 10px 22px 16px;
         max-height: calc(100vh - 150px);
         overflow: hidden;
+        scroll-behavior: smooth;
         position: relative;
       }
       /* Fade at bottom — looks like paper still rolling */
@@ -214,20 +215,20 @@
       .receipt-edge-top {
         height: 18px;
         background:
-          linear-gradient(135deg, #111 25%, transparent 25%) -10px 0,
-          linear-gradient(225deg, #111 25%, transparent 25%) -10px 0,
-          linear-gradient(315deg, #111 25%, transparent 25%),
-          linear-gradient(45deg,  #111 25%, transparent 25%);
+          linear-gradient(135deg, #f7f1e8 25%, transparent 25%) -10px 0,
+          linear-gradient(225deg, #f7f1e8 25%, transparent 25%) -10px 0,
+          linear-gradient(315deg, #f7f1e8 25%, transparent 25%),
+          linear-gradient(45deg,  #f7f1e8 25%, transparent 25%);
         background-size: 20px 20px;
         background-color: #fff;
       }
       .receipt-edge-bottom {
         height: 18px;
         background:
-          linear-gradient(315deg, #111 25%, transparent 25%) -10px 0,
-          linear-gradient(45deg,  #111 25%, transparent 25%) -10px 0,
-          linear-gradient(135deg, #111 25%, transparent 25%),
-          linear-gradient(225deg, #111 25%, transparent 25%);
+          linear-gradient(315deg, #f7f1e8 25%, transparent 25%) -10px 0,
+          linear-gradient(45deg,  #f7f1e8 25%, transparent 25%) -10px 0,
+          linear-gradient(135deg, #f7f1e8 25%, transparent 25%),
+          linear-gradient(225deg, #f7f1e8 25%, transparent 25%);
         background-size: 20px 20px;
         background-color: #fff;
       }
@@ -238,7 +239,7 @@
         overflow: hidden;
         max-height: 0;
         opacity: 0;
-        transition: max-height 0.08s ease, opacity 0.10s ease;
+        transition: max-height 0.22s ease, opacity 0.22s ease;
       }
       .r-line-wrap.visible {
         max-height: 2.2em;
@@ -297,8 +298,8 @@
       .r-slbl {
         font-family: 'Courier New', monospace;
         font-size: 0.60rem;
-        color: #E8B4B8;
-        opacity: 0.5;
+        color: #8B3A2F;
+        opacity: 0.72;
         writing-mode: vertical-rl;
         letter-spacing: 0.1em;
         user-select: none;
@@ -308,29 +309,29 @@
         -webkit-appearance: slider-vertical;
         appearance: slider-vertical;
         writing-mode: vertical-lr;
-        direction: rtl;
+        direction: ltr;
         flex: 1;
         width: 6px;
         cursor: ns-resize;
-        accent-color: #E8B4B8;
+        accent-color: #FF5A5F;
       }
       #receipt-slider::-webkit-slider-runnable-track {
-        width: 4px; background: #2a2a2a; border-radius: 2px;
+        width: 4px; background: #d7c7b8; border-radius: 2px;
       }
       #receipt-slider::-webkit-slider-thumb {
         -webkit-appearance: none;
         width: 20px; height: 20px; border-radius: 50%;
-        background: #E8B4B8; border: 3px solid #fff;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+        background: #FF5A5F; border: 3px solid #fff;
+        box-shadow: 0 4px 12px rgba(139,58,47,0.28);
         margin-left: -8px; cursor: ns-resize;
       }
       #receipt-slider::-moz-range-track {
-        width: 4px; background: #2a2a2a; border-radius: 2px;
+        width: 4px; background: #d7c7b8; border-radius: 2px;
       }
       #receipt-slider::-moz-range-thumb {
         width: 18px; height: 18px; border-radius: 50%;
-        background: #E8B4B8; border: 3px solid #fff;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.6); cursor: ns-resize;
+        background: #FF5A5F; border: 3px solid #fff;
+        box-shadow: 0 4px 12px rgba(139,58,47,0.28); cursor: ns-resize;
       }
     `;
     var el = document.createElement('style');
@@ -365,11 +366,11 @@
       '  <h2>The Receipt</h2>',
 
       '  <p>Between 2018 and 2024, Milan\'s',
-      '  short-term rental market grew by',
-      '  <strong style="color:#E8B4B8">5,506%</strong>.</p>',
+      '  review activity grew by',
+      '  <strong style="color:#E8B4B8">510%</strong>.</p>',
 
       '  <p>This receipt itemises what that',
-      '  growth cost — in rents, in listings,',
+      '  growth cost - in rents, in reviews,',
       '  and in the neighbourhoods that',
       '  changed beyond recognition.</p>',
 
@@ -426,7 +427,7 @@
   }
 
   // ── Render lines ──────────────────────────────────────────
-  function renderTo(count) {
+  function renderTo(count, shouldScroll) {
     var badge = document.getElementById('receipt-year-badge');
     var hint  = document.getElementById('receipt-hint');
 
@@ -461,11 +462,12 @@
       }
     });
 
-    // Scroll to latest line
+    // Keep the motion inside the receipt instead of moving the whole page.
     var inner = document.getElementById('receipt-inner');
-    if (inner) {
-      var vis = inner.querySelectorAll('.r-line-wrap.visible');
-      if (vis.length) vis[vis.length - 1].scrollIntoView({ block: 'nearest' });
+    if (inner && shouldScroll) {
+      requestAnimationFrame(function() {
+        inner.scrollTo({ top: inner.scrollHeight, behavior: 'smooth' });
+      });
     }
   }
 
@@ -478,11 +480,11 @@
     if (!slider) return;
 
     slider.addEventListener('input', function() {
-      renderTo(parseInt(slider.value, 10));
+      renderTo(parseInt(slider.value, 10), true);
     });
 
-    // Show first 5 lines as preview
-    setTimeout(function() { slider.value = 5; renderTo(5); }, 500);
+    slider.value = 0;
+    renderTo(0, false);
   }
 
   if (document.readyState === 'loading') {

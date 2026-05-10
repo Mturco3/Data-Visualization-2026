@@ -43,7 +43,7 @@
   /* Derived tones (lighter/darker versions of the palette)        */
   --bg-dark:      #1a1a1a;   /* Near-black for dark sections           */
   --bg-mid:       #2a2a2a;   /* Slightly lighter for card surfaces     */
-  --bg-light:     #faf8f5;   /* Warm off-white for light sections      */
+  --bg-light:     #FCFAF7;   /* Warm off-white for light sections      */
   --text-main:    #1a1a1a;   /* Default body text on light bg          */
   --text-light:   #f0ece6;   /* Body text on dark bg                   */
   --text-muted:   #888888;   /* Subdued labels, captions               */
@@ -283,7 +283,7 @@ blockquote.central-question {
   color: var(--rosa);
   font-size: 1.1rem;
   max-width: 600px;
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto var(--space-md);
 }
 
 /* Animated down-arrow at the bottom of the hero */
@@ -356,13 +356,18 @@ blockquote.central-question {
    Alternating light/dark backgrounds create visual rhythm.
 ----------------------------------------------------------------- */
 .section {
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0;
 }
 
 /* Light variant: warm off-white */
 .section--light {
   background: var(--bg-light);
   color: var(--text-main);
+}
+
+.section--data {
+  background:
+    linear-gradient(180deg, #fffdf9 0%, #f7f1e8 100%);
 }
 
 /* Dark variant: near-black */
@@ -376,6 +381,91 @@ blockquote.central-question {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-md);
+}
+
+.container--dashboard {
+  max-width: min(1600px, calc(100vw - 32px));
+}
+
+.container--wide {
+  max-width: min(1380px, calc(100vw - 32px));
+}
+
+.dashboard-shell {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.dashboard-kicker {
+  margin-bottom: 0.45rem;
+  color: var(--rausch);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section--pressure {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255,90,95,0.08), transparent 28%),
+    linear-gradient(180deg, #FCFAF7 0%, #fff8f1 100%);
+}
+
+.pressure-heading {
+  max-width: 920px;
+  margin-bottom: var(--space-md);
+}
+
+.pressure-question {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.36fr) 1fr;
+  gap: var(--space-md);
+  align-items: start;
+  border-top: 1px solid rgba(139,58,47,0.16);
+  border-bottom: 1px solid rgba(139,58,47,0.16);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.pressure-question span {
+  color: var(--tetti);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.pressure-question p {
+  color: #4f4841;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 780px;
+}
+
+.pressure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.pressure-figure {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(139,58,47,0.12);
+  border-radius: var(--radius-md);
+  box-shadow: 0 18px 42px rgba(139,58,47,0.08);
+  overflow: hidden;
+}
+
+.pressure-figure img {
+  width: 100%;
+  display: block;
+  background: #FCFAF7;
+}
+
+.pressure-figure figcaption {
+  color: #5f554d;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  padding: var(--space-sm) var(--space-md) var(--space-md);
 }
 
 /* Section heading with a coloured underline */
@@ -421,6 +511,163 @@ blockquote.central-question {
   margin-bottom: var(--space-sm);
 }
 
+.landmark-year-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+#landmark-year-display {
+  min-width: 78px;
+  color: var(--tetti);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.landmark-year-picker {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(64px, 1fr));
+  gap: 8px;
+  flex: 1;
+}
+
+.landmark-year-button {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--tetti);
+  cursor: pointer;
+  font: 700 0.9rem/1 var(--font-body);
+  padding: 12px 10px;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.landmark-year-button:hover,
+.landmark-year-button.active {
+  background: var(--tetti);
+  border-color: var(--tetti);
+  color: var(--white);
+}
+
+.landmark-year-button:hover {
+  transform: translateY(-2px);
+}
+
+.invasion-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: var(--space-md);
+  align-items: stretch;
+  margin-top: var(--space-md);
+}
+
+.invasion-viz {
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.92), rgba(250,246,240,0.85)),
+    url('assets/milan_map.png') center / cover;
+}
+
+.invasion-viz svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.invasion-panel {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: var(--space-md);
+}
+
+.invasion-panel h3 {
+  color: var(--tetti);
+  margin-bottom: var(--space-sm);
+}
+
+.invasion-panel h4 {
+  margin: var(--space-md) 0 var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.invasion-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+}
+
+.invasion-metrics div {
+  border-left: 3px solid var(--rausch);
+  background: var(--bg-light);
+  padding: 10px 12px;
+}
+
+.invasion-metrics span {
+  display: block;
+  color: var(--tetti);
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.invasion-metrics small {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.invasion-ranking {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.invasion-ranking li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 8px;
+  font-size: 0.86rem;
+}
+
+.invasion-ranking strong {
+  color: var(--text-main);
+}
+
+.invasion-ranking span {
+  color: var(--rausch);
+  font-weight: 700;
+}
+
+.invasion-tooltip {
+  position: absolute;
+  z-index: 60;
+  max-width: 240px;
+  pointer-events: none;
+  border: 1px solid rgba(26,26,26,0.14);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  opacity: 0;
+  padding: 8px 10px;
+  transition: opacity var(--transition);
+}
+
 /* Horizontal rule between creative blocks */
 .section-divider {
   border: none;
@@ -454,7 +701,7 @@ blockquote.central-question {
 .callout--red {
   background: rgba(210, 35, 42, 0.1);
   border-left: 4px solid var(--rosso);
-  color: var(--text-light);
+  color: var(--text-main);
 }
 
 
@@ -470,16 +717,16 @@ blockquote.central-question {
 }
 
 .dataset-card {
-  background: var(--bg-mid);
-  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.86);
+  border-radius: var(--radius-md);
   padding: var(--space-md);
-  border: 1px solid var(--border-dark);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 1px solid rgba(139,58,47,0.12);
+  box-shadow: 0 16px 36px rgba(139,58,47,0.08);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .dataset-card:hover {
-  box-shadow: 0 16px 48px rgba(0,0,0,0.28);
+  box-shadow: 0 20px 44px rgba(139,58,47,0.13);
   transform: translateY(-4px);
 }
 
@@ -499,7 +746,7 @@ blockquote.central-question {
 }
 
 .dataset-card h3 {
-  color: var(--oro);
+  color: var(--tetti);
   margin-bottom: var(--space-xs);
 }
 
@@ -513,7 +760,7 @@ blockquote.central-question {
 
 .dataset-card li {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #4f4841;
   padding-left: var(--space-sm);
   position: relative;
 }
@@ -699,47 +946,73 @@ blockquote.central-question {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  max-height: 420px;
-  border-radius: 16px;
-  background: #2a2a2a;
-  margin-bottom: 2rem;
+  border-radius: 0;
+  background: transparent;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.tableau-stage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .tableau-wrapper .tableauPlaceholder {
-  width: 100% !important;
-  max-width: 100% !important;
+  display: block;
+  position: relative !important;
+  max-width: none !important;
+  margin: 0 auto;
+  transform-origin: top left;
 }
 
 .tableau-wrapper object.tableauViz {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 1500px !important;
+  max-width: none !important;
+  min-width: 1500px;
+  min-height: 1120px;
+  display: block;
 }
 
-
-/* -----------------------------------------------------------------
-  12. VIZ LEGEND
-   Describes the four Tableau views below the dashboard.
------------------------------------------------------------------ */
-.viz-legend {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-  margin-top: var(--space-sm);
+.tableau-wrapper iframe {
+  width: 1500px !important;
+  max-width: none !important;
+  min-width: 1500px;
+  min-height: 1120px;
+  border: 0;
+  display: block;
 }
 
-.legend-item {
-  display: flex;
-  align-items: center;
+.dashboard-comments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-sm);
-  font-size: 0.9rem;
-  color: var(--text-light);
+  margin-top: var(--space-md);
 }
 
-.legend-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  flex-shrink: 0;   /* Never squeezed */
+.dashboard-comment {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,248,241,0.88));
+  border: 1px solid rgba(139,58,47,0.12);
+  border-top: 3px solid var(--rausch);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: 0 16px 36px rgba(139,58,47,0.08);
+}
+
+.dashboard-comment h3 {
+  margin-bottom: 0.35rem;
+  color: var(--tetti);
+  font-size: 1.05rem;
+}
+
+.dashboard-comment p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 
@@ -854,7 +1127,7 @@ blockquote.central-question {
   background: #FF5A5F;
   color: var(--white);
   text-align: center;
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-md) var(--space-md);
 }
 
 .hats-header h2 {
@@ -992,8 +1265,9 @@ blockquote.central-question {
   17. FOOTER
 ----------------------------------------------------------------- */
 #footer {
-  background: #111;
+  background: #f4ede5;
   color: var(--text-muted);
+  border-top: 1px solid rgba(139,58,47,0.12);
   text-align: center;
   padding: var(--space-lg) 0;
 }
@@ -1080,6 +1354,33 @@ blockquote.central-question {
     padding: var(--space-lg) var(--space-sm);
   }
 
+  .landmark-year-control {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .landmark-year-picker {
+    grid-template-columns: repeat(4, minmax(64px, 1fr));
+    width: 100%;
+  }
+
+  .invasion-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .invasion-viz {
+    min-height: 420px;
+  }
+
+  .pressure-question,
+  .pressure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-comments {
+    grid-template-columns: 1fr;
+  }
+
   /* Smaller stat cards on mobile */
   .stat-card {
     min-width: 120px;
@@ -1088,5 +1389,10 @@ blockquote.central-question {
 
   .stat-number {
     font-size: 1.8rem;
+  }
+
+  .tableau-wrapper object.tableauViz,
+  .tableau-wrapper iframe {
+    min-height: 1120px;
   }
 }

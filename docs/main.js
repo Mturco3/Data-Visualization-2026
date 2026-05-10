@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  initInitialScrollPosition();
   initNavbar();
-  initTaskAccordion();
   initScrollReveal();
 
   fetch('assets/metrics.json')
@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
       initD3Timeline();
     });
 });
+
+function initInitialScrollPosition() {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+}
 
 
 function initNavbar() {
@@ -77,23 +87,6 @@ function initStatCounters(heroMetrics) {
     }
 
     requestAnimationFrame(step);
-  });
-}
-
-
-function initTaskAccordion() {
-  var taskCards = document.querySelectorAll('.task-card');
-
-  taskCards.forEach(function (card) {
-    var header = card.querySelector('.task-header');
-
-    header.addEventListener('click', function () {
-      var isOpen = card.classList.contains('open');
-      taskCards.forEach(function (c) {
-        c.classList.remove('open');
-      });
-      if (!isOpen) card.classList.add('open');
-    });
   });
 }
 
