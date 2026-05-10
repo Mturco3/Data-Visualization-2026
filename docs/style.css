@@ -68,6 +68,10 @@
 
   /* Transition speed */
   --transition: 0.25s ease;
+
+  /* Shared page canvas: matches the Tableau dashboard width. */
+  --content-max: 1500px;
+  --dashboard-height: 1120px;
 }
 
 
@@ -376,23 +380,23 @@ blockquote.central-question {
   color: var(--text-light);
 }
 
-/* Centred content column, max 1100px wide */
+/* Centred content column aligned to the Tableau dashboard canvas. */
 .container {
-  max-width: 1100px;
+  max-width: min(var(--content-max), calc(100vw - 32px));
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
 .container--dashboard {
-  max-width: min(1600px, calc(100vw - 32px));
+  max-width: min(var(--content-max), calc(100vw - 32px));
 }
 
 .container--wide {
-  max-width: min(1380px, calc(100vw - 32px));
+  max-width: min(var(--content-max), calc(100vw - 32px));
 }
 
 .dashboard-shell {
-  max-width: 1500px;
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 
@@ -403,6 +407,50 @@ blockquote.central-question {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.dashboard-route {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.dashboard-route article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-sm);
+  row-gap: 0.35rem;
+  align-items: start;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(139,58,47,0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  box-shadow: 0 14px 34px rgba(139,58,47,0.07);
+}
+
+.dashboard-route span {
+  grid-row: span 2;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--rausch);
+  color: var(--white);
+  font-weight: 800;
+}
+
+.dashboard-route h3 {
+  color: var(--tetti);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.dashboard-route p {
+  color: #5f554d;
+  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
 .section--pressure {
@@ -959,6 +1007,7 @@ blockquote.central-question {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .tableau-wrapper .tableauPlaceholder {
@@ -966,22 +1015,22 @@ blockquote.central-question {
   position: relative !important;
   max-width: none !important;
   margin: 0 auto;
-  transform-origin: top left;
+  transform-origin: top center;
 }
 
 .tableau-wrapper object.tableauViz {
   width: 1500px !important;
+  height: var(--dashboard-height) !important;
   max-width: none !important;
   min-width: 1500px;
-  min-height: 1120px;
   display: block;
 }
 
 .tableau-wrapper iframe {
   width: 1500px !important;
+  height: var(--dashboard-height) !important;
   max-width: none !important;
   min-width: 1500px;
-  min-height: 1120px;
   border: 0;
   display: block;
 }
@@ -1373,7 +1422,8 @@ blockquote.central-question {
   }
 
   .pressure-question,
-  .pressure-grid {
+  .pressure-grid,
+  .dashboard-route {
     grid-template-columns: 1fr;
   }
 
@@ -1391,8 +1441,4 @@ blockquote.central-question {
     font-size: 1.8rem;
   }
 
-  .tableau-wrapper object.tableauViz,
-  .tableau-wrapper iframe {
-    min-height: 1120px;
-  }
 }

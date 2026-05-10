@@ -149,11 +149,28 @@
         <h2 class="section-title">Interactive Dashboard</h2>
         <p class="dashboard-kicker">Citywide overview, zone selection, and market context in one frame</p>
         <p class="section-intro">
-          The dashboard reads Milan from the top down: first the citywide Airbnb and rent-market
-          indicators, then the neighbourhood map, then the yearly review and OMI rent trajectories.
-          The final panels compare residential typologies and test whether higher Airbnb prices
-          tend to sit in higher-rent zones.
+          After the opening evidence, the dashboard turns the question from "is Airbnb pressure
+          growing?" into "where does that pressure sit, and how does it relate to Milan's rent
+          landscape?" Read it as a guided sequence: locate a zone, compare its Airbnb signal with
+          OMI rent context, then check whether the pattern is isolated or part of a wider geography.
         </p>
+        <div class="dashboard-route" aria-label="How to read the dashboard">
+          <article>
+            <span>1</span>
+            <h3>Locate Pressure</h3>
+            <p>Use the map to see where review intensity, prices, hosts, and listings concentrate across Milan.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Compare Tempo</h3>
+            <p>Separate fast-moving platform activity from slower rent-market indicators, especially after 2020.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Test The Link</h3>
+            <p>Use the scatter and typology views to see whether Airbnb value and residential rent levels move together.</p>
+          </article>
+        </div>
         <div class="tableau-wrapper">
           <div class="tableau-stage" id="tableau-stage">
             <div class='tableauPlaceholder' id='viz1746877225428' style='position: relative'>
@@ -182,10 +199,21 @@
             var stageElement = document.getElementById('tableau-stage');
             var divElement = document.getElementById('viz1746877225428');
             var vizElement = divElement.getElementsByTagName('object')[0];
+            var tableauSettleTimer;
+            var tableauHeightObserver;
+            var tableauMutationObserver;
+
+            function syncTableauStageHeight() {
+              var renderedHeight = divElement.getBoundingClientRect().height;
+              if (renderedHeight > 0) {
+                stageElement.style.height = Math.ceil(renderedHeight) + 'px';
+              }
+            }
+
             function sizeTableauViz() {
               var dashboardWidth = 1500;
               var dashboardHeight = 1120;
-              var availableWidth = stageElement.clientWidth;
+              var availableWidth = stageElement.clientWidth || dashboardWidth;
               var scale = Math.min(1, availableWidth / dashboardWidth);
 
               stageElement.style.height = (dashboardHeight * scale) + 'px';
@@ -196,26 +224,52 @@
               vizElement.style.width = dashboardWidth + 'px';
               vizElement.style.height = dashboardHeight + 'px';
               vizElement.style.transform = 'none';
+              window.requestAnimationFrame(syncTableauStageHeight);
             }
             sizeTableauViz();
-            window.addEventListener('resize', sizeTableauViz);
+            window.addEventListener('resize', function() {
+              sizeTableauViz();
+              window.requestAnimationFrame(syncTableauStageHeight);
+            });
+            if ('ResizeObserver' in window) {
+              tableauHeightObserver = new ResizeObserver(function() {
+                window.requestAnimationFrame(syncTableauStageHeight);
+              });
+              tableauHeightObserver.observe(divElement);
+            }
+            if ('MutationObserver' in window) {
+              tableauMutationObserver = new MutationObserver(function() {
+                var iframeElement = divElement.querySelector('iframe');
+                if (iframeElement && !iframeElement.dataset.heightSynced) {
+                  iframeElement.dataset.heightSynced = 'true';
+                  iframeElement.addEventListener('load', syncTableauStageHeight);
+                }
+                window.requestAnimationFrame(syncTableauStageHeight);
+              });
+              tableauMutationObserver.observe(divElement, { childList: true, subtree: true, attributes: true });
+            }
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            tableauSettleTimer = window.setInterval(syncTableauStageHeight, 250);
+            window.setTimeout(function() {
+              window.clearInterval(tableauSettleTimer);
+              syncTableauStageHeight();
+            }, 6000);
           </script>
         </div>
         <div class="dashboard-comments">
           <article class="dashboard-comment">
-            <h3>Read The Map First</h3>
-            <p>Start with the Milan map: selecting a zone turns the dashboard from a citywide overview into a local comparison of listings, reviews, hosts, Airbnb prices, and OMI rent levels.</p>
+            <h3>The Map Is The Entry Point</h3>
+            <p>Each zone selection turns the dashboard from a city average into a local case. The most important move is not only spotting high values, but asking whether the same zone is high across several indicators.</p>
           </article>
           <article class="dashboard-comment">
-            <h3>Separate Tempo From Level</h3>
-            <p>Reviews move like a platform signal, with a COVID break and a fast rebound. OMI rents move more slowly, so the dashboard keeps growth rates and rent levels visually distinct.</p>
+            <h3>Growth And Level Tell Different Stories</h3>
+            <p>Reviews capture acceleration, while OMI rents describe the housing-market backdrop. A zone can have a strong Airbnb rebound without being the most expensive rent area, which is why the dashboard keeps both dimensions visible.</p>
           </article>
           <article class="dashboard-comment">
-            <h3>Use Correlation Carefully</h3>
-            <p>The scatter view suggests alignment between expensive Airbnb offers and expensive rent environments, but the spread across zones is the point: pressure is spatially uneven.</p>
+            <h3>The Evidence Is Spatial, Not Automatic</h3>
+            <p>The scatter view asks whether expensive Airbnb areas also sit in expensive rent environments. The spread across points matters: the data suggests pressure is uneven, place-specific, and strongest when multiple signals overlap.</p>
           </article>
         </div>
       </div>
