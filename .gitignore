@@ -4,3 +4,15 @@ Data_Viz/
 venv/
 src/io/
 .ipynb_checkpoints/
+
+# Data
+Data/
+
+# LaTeX build artifacts (keep the PDF)
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz

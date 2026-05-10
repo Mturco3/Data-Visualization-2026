@@ -1,0 +1,403 @@
+% ============================================================
+%  Airbnb & the Milan Rental Market - Project Report
+%  Data Visualisation 2026
+% ============================================================
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages -----------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{eurosym}
+\usepackage{mdframed}
+
+% --- Page geometry ------------------------------------------
+\geometry{
+  a4paper,
+  top    = 2.8cm,
+  bottom = 2.8cm,
+  left   = 2.5cm,
+  right  = 2.5cm,
+  headheight = 22pt
+}
+
+% --- Colours ------------------------------------------------
+\definecolor{tetti}{HTML}{8B3A2F}
+\definecolor{textmuted}{HTML}{555555}
+\definecolor{aibg}{HTML}{F2F2F2}
+
+% --- Hyperref setup -----------------------------------------
+\hypersetup{
+  colorlinks  = true,
+  linkcolor   = tetti,
+  urlcolor    = tetti,
+  citecolor   = tetti,
+  pdftitle    = {Airbnb \& the Milan Rental Market},
+  pdfauthor   = {Data Visualisation Project 2026},
+}
+
+% --- Section title styling ----------------------------------
+\titleformat{\section}
+  {\large\bfseries\color{tetti}}
+  {\thesection.}{0.6em}{}[\vspace{-4pt}{\color{tetti}\rule{\linewidth}{0.6pt}}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{tetti}}
+  {\thesubsection.}{0.5em}{}
+
+% --- AI statement box style ---------------------------------
+\mdfdefinestyle{aibox}{%
+  backgroundcolor = aibg,
+  linecolor       = textmuted,
+  linewidth       = 1pt,
+  leftline        = true,
+  rightline       = false,
+  topline         = false,
+  bottomline      = false,
+  innerleftmargin = 10pt,
+  innerrightmargin= 10pt,
+  innertopmargin  = 8pt,
+  innerbottommargin = 8pt,
+  skipabove       = 10pt,
+  skipbelow       = 6pt,
+}
+
+% --- Header & Footer ----------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+
+% Header
+\fancyhead[L]{\small\textcolor{textmuted}{Airbnb \& the Milan Rental Market}}
+\fancyhead[R]{\small\textcolor{textmuted}{Data Visualisation Project 2026}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Footer
+\fancyfoot[L]{\small\textcolor{textmuted}{%
+  \href{https://mturco3.github.io/Data-Visualization-2026/}{mturco3.github.io/Data-Visualization-2026}}}
+\fancyfoot[C]{\small\textcolor{textmuted}{\thepage}}
+\fancyfoot[R]{\small\textcolor{textmuted}{Inside Airbnb \& OMI - Agenzia delle Entrate}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Plain style for title page
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\small\textcolor{textmuted}{\thepage}}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% ============================================================
+%  DOCUMENT
+% ============================================================
+\begin{document}
+
+% --- Title page ---------------------------------------------
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+
+  {\small\textcolor{textmuted}{\textbf{DATA VISUALISATION PROJECT 2026}}\par}
+  \vspace{0.8cm}
+
+  {\Huge\bfseries\color{tetti} Airbnb \& the Milan\\ Rental Market\par}
+  \vspace{0.5cm}
+
+  {\large\color{textmuted}
+    Exploring the spatial and temporal correlation between\\
+    short-term rentals and long-term rent prices in Milan (2018-2024)\par}
+
+  \vspace{1cm}
+  {\normalsize\color{textmuted}
+    Amanda Ambrosone \quad Ludovica Congedo \quad Matilde Marucci \quad Michele Turco\par}
+
+  \vspace{1.5cm}
+  \textcolor{tetti}{\rule{0.4\linewidth}{0.8pt}}
+  \vspace{1.5cm}
+
+  {\normalsize
+  \begin{tabular}{ll}
+    \textbf{GitHub Repository} &
+      \href{https://github.com/Mturco3/Data-Visualization-2026}%
+           {github.com/Mturco3/Data-Visualization-2026} \\[4pt]
+    \textbf{Interactive Dashboard} &
+      \href{https://public.tableau.com/app/profile/michele.turco/viz/Milan_Housing_Dynamics/Dashboard1}%
+           {Tableau Public - Milan Housing Dynamics} \\[4pt]
+    \textbf{Project Website} &
+      \href{https://mturco3.github.io/Data-Visualization-2026/}%
+           {mturco3.github.io/Data-Visualization-2026} \\[4pt]
+    \textbf{Airbnb Data} &
+      \href{https://insideairbnb.com/get-the-data/}{insideairbnb.com/get-the-data} \\[4pt]
+    \textbf{OMI Milan Data} &
+      \href{https://dati.comune.milano.it/dataset?tags=OMI}{dati.comune.milano.it - OMI} \\
+  \end{tabular}\par}
+
+  \vfill
+  {\small\textcolor{textmuted}%
+    {Analysis performed for educational purposes only.
+     All data is publicly available.}}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+
+Over the past decade, platforms like Airbnb have transformed how people travel and, crucially,
+how cities allocate their housing stock. In Milan, Italy's economic capital and one of Europe's
+most visited cities, the number of active short-term rental listings has grown dramatically
+since 2018, raising a pressing question for residents and policymakers alike:
+
+\begin{quote}\itshape
+  How has the rise of short-term rentals reshaped Milan's urban housing landscape between 2018
+  and 2024, and is there a measurable spatial and temporal correlation with the long-term
+  rental market?
+\end{quote}
+
+This project uses Milan as a case study of a broader European phenomenon. We combine two public
+datasets, Airbnb listing data and OMI official rent estimates from the Italian Revenue Agency,
+to map where short-term rental pressure is highest and whether those same areas show rising
+long-term rents.
+
+\smallskip
+\noindent\textbf{Honest scope.}
+We measure \emph{market pressure} (correlation between Airbnb growth and rent levels), not
+direct displacement. Measuring displacement would require eviction or registry data we do not
+have. The distinction between pressure and displacement is itself an interpretive choice, and
+we make it explicit in Section~\ref{sec:hats}.
+
+\noindent\textbf{Target audience.}
+Urban planners, students, local residents, and policy observers who need clear spatial and
+temporal evidence rather than purely technical metrics.
+
+% ============================================================
+\section{Data Sources}
+\label{sec:data}
+
+\subsection{Inside Airbnb - Milan}
+
+Listing-level snapshot from Inside Airbnb (2025), with the embedded review history used as a
+temporal proxy to reconstruct activity from 2018 to 2024.
+Source: \href{https://insideairbnb.com/get-the-data/}{insideairbnb.com/get-the-data}.
+
+\begin{itemize}[leftmargin=1.4em]
+  \item \textbf{Reviews dataset:} Review-level records (listing\_id and review date) are used
+        to estimate yearly Airbnb activity when full historical availability is not available.
+  \item \textbf{Granularity:} Individual listing, aggregated by neighbourhood and OMI zone.
+  \item \textbf{Key fields:} host\_id, room\_type, price, reviews\_per\_month,
+        calculated\_host\_listings\_count, license (CIN), listing\_id, review date.
+  \item \textbf{Limitations:} Scraped data; availability calendars are unreliable; no direct
+        revenue figures; the review-based activity proxy underestimates listings with few reviews.
+\end{itemize}
+
+\subsection{OMI - Agenzia delle Entrate}
+
+Official long-term rent estimates published by the Italian Revenue Agency, by OMI zone and
+semester (2018 H1 to 2024 H2).
+Source: \href{https://dati.comune.milano.it/dataset?tags=OMI}{dati.comune.milano.it - OMI}.
+
+\begin{itemize}[leftmargin=1.4em]
+  \item \textbf{Granularity:} OMI zone, mapped to Airbnb neighbourhoods via a custom crosswalk.
+  \item \textbf{Key fields:} zona\_omi, typology, rent\_min, rent\_max, semester.
+  \item \textbf{Limitations:} OMI publishes estimated ranges, not actual transaction prices;
+        OMI zone boundaries do not align with Airbnb neighbourhoods; some zones were merged or
+        redrawn during the period.
+\end{itemize}
+
+\subsection{Custom Neighbourhood-Zone Crosswalk}
+
+OMI zones and Airbnb neighbourhoods use different boundary systems. We built a curated crosswalk
+that links each Airbnb neighbourhood to one or more OMI zones, which lets us attach official rent
+context to every listing in the snapshot.
+
+% ============================================================
+\section{Interactive Dashboard}
+\label{sec:dashboard}
+
+The Tableau dashboard summarises Milan's Airbnb pressure and housing-market context between
+2019 and 2024. It combines citywide KPIs, a neighbourhood map, Airbnb review growth, OMI rent
+growth, residential typology rent levels, and the relationship between average Airbnb price and
+average rent level.
+
+\medskip
+\noindent\textbf{Access the dashboard:}\\
+\href{https://public.tableau.com/app/profile/michele.turco/viz/Milan_Housing_Dynamics/Dashboard1}%
+{\texttt{public.tableau.com/.../Milan\_Housing\_Dynamics/Dashboard1}}
+
+\medskip
+The dashboard offers four interactive views:
+
+\begin{itemize}[leftmargin=1.4em]
+  \item \textbf{Map:} select a Milan zone to inspect local Airbnb and rent-market indicators.
+  \item \textbf{KPI strip:} average Airbnb price, OMI level, total listings, reviews, and
+        distinct hosts.
+  \item \textbf{Trend views:} Airbnb review growth rate and residential rent-level growth rate
+        from 2019 to 2024.
+  \item \textbf{Comparison views:} OMI rent by residential typology and Airbnb price versus
+        rent level.
+\end{itemize}
+
+% ============================================================
+\section{Exploratory Analysis and Key Visualisations}
+\label{sec:eda}
+
+\subsection{Overview: Current Offer and Neighbourhood Concentration}
+
+The current listing stock is dominated by \emph{entire homes}, which account for approximately
+87.9\,\% of the snapshot. Five neighbourhoods (Buenos Aires-Venezia, Duomo, Sarpi,
+Centrale, and Loreto) concentrate roughly 28\,\% of all listings, indicating strong
+spatial clustering in central and tourist-attractive areas.
+
+\subsection{Minimum-Stay Requirements}
+
+An analysis of the \texttt{minimum\_nights} field reveals how hosts position their listings
+on the market. Most listings fall in the short-stay category (1 to 6 nights), confirming a
+predominantly tourist-oriented supply. A non-trivial share of listings requires 30 or more
+nights, signalling segments that operate closer to the medium-term rental market.
+
+\subsection{Temporal Dynamics: 2018 to 2024}
+
+Review activity is used as a proxy for listing activity over time. Key observations:
+
+\begin{itemize}[leftmargin=1.4em]
+  \item Review activity fell by approximately 67.5\,\% from 2019 to 2020, reflecting the
+        impact of the COVID-19 pandemic on tourism.
+  \item Recovery was rapid and strong. By 2024, the yearly review count was approximately
+        329\,\% above the 2019 level.
+  \item Official OMI rents moved more sluggishly: they declined modestly in 2020 to 2021 and
+        then recovered, but without matching the dramatic rebound in Airbnb activity.
+\end{itemize}
+
+\subsection{3D Isometric Map: ``The Invasion''}
+
+A Three.js isometric visualisation encodes two dimensions simultaneously: palace height
+represents the OMI midpoint rent (\euro{}/m\textsuperscript{2}/month) for each neighbourhood,
+while floating balloons above each palace represent review-inferred active listings (one balloon
+per 80 reviewed listings). Selecting any year from 2018 to 2024 animates the change in both
+dimensions, making spatial inequality and temporal growth immediately visible.
+
+The visualisation is accessible on the project website:
+\href{https://mturco3.github.io/Data-Visualization-2026/}{mturco3.github.io/Data-Visualization-2026}.
+
+% ============================================================
+\section{White Hat / Black Hat}
+\label{sec:hats}
+
+The same dataset, two radically different framings. Both are technically accurate. Only one
+is honest.
+
+\subsection{White Hat: Transparent and Constructive View}
+
+The white hat figure uses the full overlapping period from 2018 to 2024 and indexes both
+series to the same baseline (2018~=~100). The reader can see that Airbnb review activity
+rebounds much faster than official rents, but the figure does not imply direct causation. The
+design choices (shared baseline, full time window, single axis, and neutral annotation)
+give the reader a fair chance to judge how similar or dissimilar the trajectories really are.
+
+\subsection{Black Hat: Misleading Framing}
+
+The black hat figure uses the same underlying citywide series but applies several manipulative
+design decisions:
+
+\begin{enumerate}[leftmargin=1.6em]
+  \item Only the post-2021 rebound is shown, erasing the pandemic break and making the
+        recovery look like a seamless acceleration.
+  \item Dual vertical axes with different scales amplify the visual alignment between two
+        variables that live on completely different magnitudes.
+  \item The rent axis is truncated to exaggerate variation.
+  \item The title turns a visual coincidence into a causal slogan:
+        \emph{``Airbnb explodes and Milan rents follow immediately''}.
+\end{enumerate}
+
+The lesson is useful beyond this project: ethical problems in visualisation often come from
+emphasis and framing rather than fabricated data. Every data point can be real, yet the
+reader is still pushed toward a stronger conclusion than the evidence supports.
+
+% ============================================================
+\section{Key Findings}
+\label{sec:findings}
+
+\begin{enumerate}[leftmargin=1.6em]
+  \item \textbf{Concentration is real but not citywide uniform.}
+        The five largest neighbourhoods account for about 28\,\% of all listings, with
+        Buenos Aires-Venezia and Duomo standing out most clearly.
+
+  \item \textbf{Current Airbnb presence aligns with expensive rent contexts.}
+        The correlation between listing stock and linked 2024 OMI midpoint rent is positive
+        ($r \approx 0.62$). This is a cross-sectional association, not causal proof.
+
+  \item \textbf{COVID was a sharp interruption, not a reset.}
+        Review activity fell by about 67.5\,\% from 2019 to 2020, then rebounded strongly.
+        By 2024 the yearly review count was roughly 329\,\% above the 2019 level.
+
+  \item \textbf{The stock is heavily commercialised.}
+        Entire homes represent about 87.9\,\% of the snapshot, and hosts with at least five
+        listings account for about 45.1\,\%.
+
+  \item \textbf{Pressure does not automatically imply displacement.}
+        The data show a meaningful overlap between Airbnb concentration and high rent context,
+        but not direct evidence of displacement. That would require eviction or registry data.
+\end{enumerate}
+
+% ============================================================
+\section{Reproducibility and Project Resources}
+\label{sec:resources}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{p{3.5cm} p{9.5cm}}
+\toprule
+\textbf{Resource} & \textbf{Link} \\
+\midrule
+GitHub repository &
+  \href{https://github.com/Mturco3/Data-Visualization-2026}%
+       {\texttt{github.com/Mturco3/Data-Visualization-2026}} \\
+Project website &
+  \href{https://mturco3.github.io/Data-Visualization-2026/}%
+       {\texttt{mturco3.github.io/Data-Visualization-2026}} \\
+Tableau dashboard &
+  \href{https://public.tableau.com/app/profile/michele.turco/viz/Milan_Housing_Dynamics/Dashboard1}%
+       {\texttt{public.tableau.com/.../Milan\_Housing\_Dynamics}} \\
+Airbnb source data &
+  \href{https://insideairbnb.com/get-the-data/}%
+       {\texttt{insideairbnb.com/get-the-data}} \\
+OMI Milan data &
+  \href{https://dati.comune.milano.it/dataset?tags=OMI}%
+       {\texttt{dati.comune.milano.it/dataset?tags=OMI}} \\
+\bottomrule
+\end{tabular}
+\caption{Project links and data sources.}
+\end{table}
+
+All analysis is performed in Python (pandas, matplotlib, seaborn) within Jupyter notebooks
+located in the \texttt{src/} directory. The D3.js and Three.js interactive components are
+in the \texttt{docs/} directory and are served via GitHub Pages at the project website above.
+
+\medskip
+\begin{mdframed}[style=aibox]
+  \textbf{AI Tools Disclosure.}
+  Parts of this project, including code assistance, text drafting, and visualisation
+  refinement, were developed with the support of AI tools (Claude, Anthropic).
+  All analytical decisions, interpretations, and conclusions remain the authors' own.
+  Data sources are publicly available and independently verified.
+\end{mdframed}
+
+\medskip
+\noindent\textbf{Disclaimer:}
+Analysis performed for educational purposes only. All data is publicly available.
+
+\end{document}

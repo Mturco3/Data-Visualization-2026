@@ -37,7 +37,9 @@ docs/
   index.html                # Project website (served via GitHub Pages)
   main.js / landmark.js     # D3 and Three.js interactive components
   style.css
-report.tex                  # LaTeX project report (compile with pdflatex)
+report/
+  report.tex                # LaTeX source
+  report.pdf                # Compiled PDF
 Data/                       # Raw and cleaned data files
 ```
 
@@ -46,7 +48,7 @@ Data/                       # Raw and cleaned data files
 1. Install dependencies: `pip install pandas matplotlib seaborn numpy`
 2. Run `src/0_Notebook.ipynb` from top to bottom.
 3. Generated plots are saved to `src/io/plots/`.
-4. The LaTeX report can be compiled with: `pdflatex report.tex`
+4. The LaTeX report can be compiled with: `pdflatex report/report.tex`
 
 ## Key Findings
 
