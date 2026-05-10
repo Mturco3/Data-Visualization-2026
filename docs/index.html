@@ -70,16 +70,15 @@
       </blockquote>
       <p>
         This project uses Milan as a case study of a broader European phenomenon.
-        We combine two public datasets &mdash; Airbnb listing data and OMI official
-        rent estimates from the Italian Revenue Agency &mdash; to map where short-term
+        We combine two public datasets: Airbnb listing data and OMI official
+        rent estimates from the Italian Revenue Agency; to map where short-term
         rental pressure is highest and whether those same areas show rising long-term rents.
       </p>
       <div class="callout callout--gold">
         <strong>Honest scope:</strong> We measure <em>market pressure</em>
         (correlation between Airbnb growth and rent levels), not direct displacement.
-        Displacement would require eviction or registry data we do not have.
-        The distinction is a key theme in the White / Black Hat section below.
-      </div>
+        Measuring displacement would require eviction or registry data we do not have.
+        The distinction between pressure and displacement is itself an interpretive choice, and we make it explicit in the White / Black Hat section below.      </div>
     </div>
   </section>
 
@@ -91,27 +90,26 @@
           <div class="dataset-icon">A</div>
           <h3>Inside Airbnb &mdash; Milan</h3>
           <ul>
-            <li><strong>What:</strong> Listing-level snapshot downloaded in 2025 plus review history used for the 2018&ndash;2024 overlap</li>
-            <li><strong>Granularity:</strong> Individual listing &rarr; aggregated by neighbourhood</li>
-            <li><strong>Key fields:</strong> host_id, room_type, price, reviews_per_month, license (CIN)</li>
-            <li><strong>Limitations:</strong> Scraped data; availability calendars can be unreliable; no direct revenue figures</li>
+            <li><strong>What:</strong> Listing-level snapshot from Inside Airbnb (2025), with the embedded review history used as a temporal proxy to reconstruct activity from 2018 to 2024.</li>
+            <li><strong>Granularity:</strong> Individual listing → aggregated by neighbourhood and OMI zone.</li>
+            <li><strong>Key fields:</strong> host_id, room_type, price, reviews_per_month, calculated_host_listings_count, license (CIN).</li>
+            <li><strong>Limitations:</strong> Scraped data; availability calendars are unreliable; no direct revenue figures; the review-based activity proxy underestimates listings with few reviews.</li>
           </ul>
         </div>
         <div class="dataset-card">
           <div class="dataset-icon">O</div>
           <h3>OMI &mdash; Agenzia delle Entrate</h3>
           <ul>
-            <li><strong>What:</strong> Official rent-range estimates per OMI zone, every semester</li>
-            <li><strong>Granularity:</strong> OMI zone &rarr; mapped to Airbnb neighbourhoods by us</li>
-            <li><strong>Key fields:</strong> zona_omi, typology, rent_min, rent_max, semester</li>
-            <li><strong>Limitations:</strong> Ranges (not transactions); zone boundaries differ from neighbourhood boundaries; some zones merged over time</li>
+            <li><strong>What:</strong> Official long-term rent estimates published by the Italian Revenue Agency, by OMI zone and semester (2018 H1, 2024 H2).</li>
+            <li><strong>Granularity:</strong> OMI zone → mapped to Airbnb neighbourhoods via our custom crosswalk.</li>
+            <li><strong>Key fields:</strong> zona_omi, typology, rent_min, rent_max, semester.</li>
+            <li><strong>Limitations:</strong> OMI publishes estimated ranges, not actual transaction prices; OMI zone boundaries do not align with Airbnb neighbourhoods (hence the crosswalk); some zones were merged or redrawn during the period.</li>
           </ul>
         </div>
       </div>
       <div class="callout callout--red">
         <strong>Custom mapping:</strong> OMI zones and Airbnb neighbourhoods use different boundary
-        systems. We therefore use a curated crosswalk table that links each Airbnb neighbourhood
-        name to an OMI zone before attaching official rent context to the listing snapshot.
+        systems. We built a curated crosswalk that links each Airbnb neighbourhood to one or more OMI zones, which lets us attach official rent context to every listing in the snapshot.
       </div>
     </div>
   </section>
